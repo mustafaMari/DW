@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Lab10_ETL_MultiDemntional", "Lab10_ETL_MultiDemntional.dwproj", "{F43497A5-E136-41DC-8DDE-8551FD19F5D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F43497A5-E136-41DC-8DDE-8551FD19F5D2}.Development|Default.ActiveCfg = Development
+		{F43497A5-E136-41DC-8DDE-8551FD19F5D2}.Development|Default.Build.0 = Development
+		{F43497A5-E136-41DC-8DDE-8551FD19F5D2}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7796082-61CF-4672-BEBC-F26F3A11DD48}
+	EndGlobalSection
+EndGlobal
