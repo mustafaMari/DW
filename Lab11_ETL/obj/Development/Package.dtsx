@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{4E1CAE40-2D33-46E3-BC27-F33A0FEC819F}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{93774FA9-035B-4B0F-8353-15DE06041877}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2609,13 +2609,13 @@ where [refTable].[FirstName] = ?</property>
           Id="Package\Fuzzy Grouping Duplicates"
           TopLeft="319.785719637968,64.3823537669792" />
         <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\Sumplemnting data"
-          TopLeft="567.857152527693,65.0000009116005" />
-        <NodeLayout
           Size="109.6,41.6"
           Id="Package\Orders"
           TopLeft="127.142859308087,172.058825942472" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Sumplemnting data"
+          TopLeft="567.857152527693,65.0000009116005" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2625,13 +2625,21 @@ where [refTable].[FirstName] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="219.285718020128,53.5294125154357" />
+          Size="144.8,41.6"
+          Id="Package\Data Flow Task\Lab11_Person"
+          TopLeft="224.285718105277,306.200003464082" />
         <NodeLayout
           Size="183.2,41.6"
           Id="Package\Data Flow Task\Title Name connection"
           TopLeft="208.571432123379,139.176472540133" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="222.142860925928,230.917648603182" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="219.285718020128,53.5294125154357" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="297.128575071753,95.1294125154357">
@@ -2654,10 +2662,6 @@ where [refTable].[FirstName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="222.142860925928,230.917648603182" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="299.357146524653,180.776472540133">
@@ -2682,24 +2686,20 @@ where [refTable].[FirstName] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Data Flow Task\Lab11_Person"
-          TopLeft="224.285718105277,306.200003464082" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="297.614289515603,272.517648603182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.6823548608998"
+              EndConnector="0,33.6823548609"
               Start="0,0"
-              End="0,26.1823548608998">
+              End="0,26.1823548609">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.1823548608998" />
+                    End="0,26.1823548609" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2712,7 +2712,7 @@ where [refTable].[FirstName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\Lab11_Person">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2730,7 +2730,7 @@ where [refTable].[FirstName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2740,7 +2740,7 @@ where [refTable].[FirstName] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2748,7 +2748,7 @@ where [refTable].[FirstName] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lab11_Person">
+    design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2904,6 +2904,18 @@ where [refTable].[FirstName] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Orders">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Orders\Flat File Source"
+          TopLeft="414,54" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Sumplemnting data">
     <LayoutInfo>
       <GraphLayout
@@ -2970,19 +2982,6 @@ where [refTable].[FirstName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sumplemnting data\Product">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sumplemnting data\Product Group">
     <Properties>
       <Property>
@@ -2995,17 +2994,18 @@ where [refTable].[FirstName] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Orders">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Orders\Flat File Source"
-          TopLeft="414,54" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sumplemnting data\Product">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

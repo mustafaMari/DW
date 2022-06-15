@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{4E1CAE40-2D33-46E3-BC27-F33A0FEC819F}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{385BED6A-D95E-490F-8A16-5F8894F37681}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2601,21 +2601,21 @@ where [refTable].[FirstName] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Data Flow Task"
           TopLeft="119.285716317138,61.1764714462122" />
         <NodeLayout
-          Size="202.4,41.6"
+          Size="202,42"
           Id="Package\Fuzzy Grouping Duplicates"
           TopLeft="319.785719637968,64.3823537669792" />
         <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\Sumplemnting data"
-          TopLeft="567.857152527693,65.0000009116005" />
-        <NodeLayout
-          Size="109.6,41.6"
+          Size="110,42"
           Id="Package\Orders"
           TopLeft="127.142859308087,172.058825942472" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Sumplemnting data"
+          TopLeft="567.857152527693,65.0000009116005" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2625,27 +2625,35 @@ where [refTable].[FirstName] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
+          Size="145,42"
+          Id="Package\Data Flow Task\Lab11_Person"
+          TopLeft="224.285718105277,306.200003464082" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Data Flow Task\Title Name connection"
+          TopLeft="210.571432123379,138.176472540133" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="224.142860925928,229.917648603182" />
+        <NodeLayout
+          Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="219.285718020128,53.5294125154357" />
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Data Flow Task\Title Name connection"
-          TopLeft="208.571432123379,139.176472540133" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="297.128575071753,95.1294125154357">
+          TopLeft="298.178575071753,95.5294125154357">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246971"
+              EndConnector="0,42.6470600246973"
               Start="0,0"
-              End="0,36.5470600246971">
+              End="0,35.1470600246973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5470600246971" />
+                    End="0,35.1470600246973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2654,52 +2662,44 @@ where [refTable].[FirstName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="222.142860925928,230.917648603182" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="299.357146524653,180.776472540133">
+          TopLeft="301.357146524654,180.176472540133">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.1411760630492"
+              EndConnector="0,49.741176063049"
               Start="0,0"
-              End="0,42.6411760630492">
+              End="0,42.241176063049">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.6411760630492" />
+                    End="0,42.241176063049" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,13.3205880315246,114.120078125,16"
+              BoundingBox="-57.0600390625,13.1205880315245,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Data Flow Task\Lab11_Person"
-          TopLeft="224.285718105277,306.200003464082" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="297.614289515603,272.517648603182">
+          TopLeft="298.714289515603,271.917648603182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.6823548608998"
+              EndConnector="0,34.2823548609"
               Start="0,0"
-              End="0,26.1823548608998">
+              End="0,26.7823548609">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.1823548608998" />
+                    End="0,26.7823548609" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2712,7 +2712,7 @@ where [refTable].[FirstName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\Lab11_Person">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2730,7 +2730,7 @@ where [refTable].[FirstName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2740,7 +2740,7 @@ where [refTable].[FirstName] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2748,7 +2748,7 @@ where [refTable].[FirstName] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lab11_Person">
+    design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2766,125 +2766,125 @@ where [refTable].[FirstName] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="170,42"
+          Id="Package\Fuzzy Grouping Duplicates\OLE DB Destination"
+          TopLeft="459,379" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Fuzzy Grouping Duplicates\Choosing representent"
+          TopLeft="431,277" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fuzzy Grouping Duplicates\Customer grouping"
+          TopLeft="457,187" />
+        <NodeLayout
+          Size="150,42"
           Id="Package\Fuzzy Grouping Duplicates\Flat File Source"
           TopLeft="450,103" />
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Fuzzy Grouping Duplicates\Customer grouping"
-          TopLeft="455,188" />
         <EdgeLayout
-          Id="Package\Fuzzy Grouping Duplicates.Paths[Flat File Source Output]"
-          TopLeft="525.2,144.6">
+          Id="Package\Fuzzy Grouping Duplicates.Paths[Representent]"
+          TopLeft="523.5,319">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13.8,43.4"
+              EndConnector="20.5,60"
               Start="0,0"
-              End="13.8,35.9">
+              End="20.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.7" />
+                    End="0,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.7"
-                    Point2="0,21.7"
-                    Point3="4,21.7" />
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
                   <mssgle:LineSegment
-                    End="9.79999999999995,21.7" />
+                    End="16.5,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="9.79999999999995,21.7"
-                    Point2="13.8,21.7"
-                    Point3="13.8,25.7" />
+                    Point1="16.5,30"
+                    Point2="20.5,30"
+                    Point3="20.5,34" />
                   <mssgle:LineSegment
-                    End="13.8,35.9" />
+                    End="20.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-19.71638671875,35,59.9327734375,11.2822265625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fuzzy Grouping Duplicates.Paths[Fuzzy Grouping Output]"
+          TopLeft="541,229">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.5,48"
+              Start="0,0"
+              End="-17.5,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="-4,24" />
+                  <mssgle:LineSegment
+                    End="-13.5,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,24"
+                    Point2="-17.5,24"
+                    Point3="-17.5,28" />
+                  <mssgle:LineSegment
+                    End="-17.5,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.75,29,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fuzzy Grouping Duplicates.Paths[Flat File Source Output]"
+          TopLeft="525,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16,42"
+              Start="0,0"
+              End="16,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="12,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12,21"
+                    Point2="16,21"
+                    Point3="16,25" />
+                  <mssgle:LineSegment
+                    End="16,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\Fuzzy Grouping Duplicates\Choosing representent"
-          TopLeft="431,277" />
-        <EdgeLayout
-          Id="Package\Fuzzy Grouping Duplicates.Paths[Fuzzy Grouping Output]"
-          TopLeft="539,229.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-15.5999999999999,47.4000000000001"
-              Start="0,0"
-              End="-15.5999999999999,39.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.7"
-                    Point2="0,23.7"
-                    Point3="-4,23.7" />
-                  <mssgle:LineSegment
-                    End="-11.5999999999999,23.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11.5999999999999,23.7"
-                    Point2="-15.5999999999999,23.7"
-                    Point3="-15.5999999999999,27.7" />
-                  <mssgle:LineSegment
-                    End="-15.5999999999999,39.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.8,28.7,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Fuzzy Grouping Duplicates\OLE DB Destination"
-          TopLeft="456,378" />
-        <EdgeLayout
-          Id="Package\Fuzzy Grouping Duplicates.Paths[Representent]"
-          TopLeft="523.4,318.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.8000000000001,59.3999999999999"
-              Start="0,0"
-              End="17.8000000000001,51.8999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.6999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.6999999999999"
-                    Point2="0,29.6999999999999"
-                    Point3="4,29.6999999999999" />
-                  <mssgle:LineSegment
-                    End="13.8000000000001,29.6999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.8000000000001,29.6999999999999"
-                    Point2="17.8000000000001,29.6999999999999"
-                    Point3="17.8000000000001,33.6999999999999" />
-                  <mssgle:LineSegment
-                    End="17.8000000000001,51.8999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-21.06638671875,34.6999999999999,59.9327734375,11.2822265625"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2904,16 +2904,32 @@ where [refTable].[FirstName] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Orders">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Orders\Flat File Source"
+          TopLeft="414,54" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Sumplemnting data">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="114.4,41.6"
+          Size="146,42"
+          Id="Package\Sumplemnting data\Product Group"
+          TopLeft="331,201" />
+        <NodeLayout
+          Size="114,42"
           Id="Package\Sumplemnting data\Product"
           TopLeft="351.5,41.5" />
         <NodeLayout
-          Size="128,41.6"
+          Size="128,42"
           Id="Package\Sumplemnting data\experssion"
           TopLeft="339,115" />
         <EdgeLayout
@@ -2938,10 +2954,6 @@ where [refTable].[FirstName] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Sumplemnting data\Product Group"
-          TopLeft="331,201" />
         <EdgeLayout
           Id="Package\Sumplemnting data.Paths[Derived Column Output]"
           TopLeft="403.6,156.6">
@@ -2970,19 +2982,6 @@ where [refTable].[FirstName] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sumplemnting data\Product">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sumplemnting data\Product Group">
     <Properties>
       <Property>
@@ -2995,17 +2994,18 @@ where [refTable].[FirstName] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Orders">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Orders\Flat File Source"
-          TopLeft="414,54" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sumplemnting data\Product">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

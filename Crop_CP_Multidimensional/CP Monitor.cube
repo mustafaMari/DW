@@ -1,0 +1,267 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a60c962f-5fc8-427d-b7ad-3aee585079da" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CP Monitor</ID>
+  <Name>CP Monitor</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="2e0066f2-ed8a-4931-b50a-600855e89179">
+      <ID>Dim Population</ID>
+      <Name>Dim Population</Name>
+      <DimensionID>Dim Population</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="02f26e5d-1967-43c4-9035-70ac204e3352">
+          <AttributeID>Id Dim Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="315960c2-0778-4550-8452-9827068932c4">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6779423-4b28-45c7-96a5-16da53e7b971">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="634945a8-47ba-4e58-ac33-e6ceba4ff32d">
+          <AttributeID>Country Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="76d0d05a-6022-4afd-b0a3-94d39cbce70a">
+          <AttributeID>Population Density</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7f296866-823a-446b-981a-a166d8328adf">
+      <ID>Dim Crop</ID>
+      <Name>Dim Crop</Name>
+      <DimensionID>Dim Crop</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2e244e55-49f5-4bba-aa7d-046336a80604">
+          <AttributeID>Id Dim Crop</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4ba0040-f631-4f73-a610-0fcb459a8306">
+          <AttributeID>Item Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e1b9b0a-accc-4f98-8a7e-a6e3071ec04d">
+          <AttributeID>Item Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="800f2b39-dd93-42c2-8037-1b4f9fb81a9f">
+          <AttributeID>Element Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="765d6478-6153-4210-add3-bf5399090d5c">
+          <AttributeID>Element Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c78f1a11-7aa0-42e4-833b-121223d6f18c">
+      <ID>Dim Climate</ID>
+      <Name>Dim Climate</Name>
+      <DimensionID>Dim Climate</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="16bfde3e-ce33-4eb0-b3a1-8c50f99de629">
+          <AttributeID>Id Dim Climate</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="657b3d7a-a8f8-4dbb-8fb1-7b730aef174d">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb7202d1-47e1-4ff7-85b4-eb9097bbdd1c">
+          <AttributeID>Loti Annual Mean</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e63abcb3-72ac-453f-a766-b1abb81e53f1">
+      <ID>Dim Location</ID>
+      <Name>Dim Location</Name>
+      <DimensionID>Dim Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5ad76ad0-26e2-488e-99b7-f85585b397b0">
+          <AttributeID>Id Dim Location</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4ee5124-2c33-4ce7-9ff1-5f17fcbeb97c">
+          <AttributeID>Continent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1ff083c-1172-4bf2-b778-91f09cac7d0a">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee315ade-314b-4205-aa2b-918f5cdb7b3f">
+          <AttributeID>Country Area</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4c7686a1-bb27-443a-8f68-f7b1bec42311">
+          <AttributeID>Region 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d99f4900-7897-48d7-98ad-a65d6eee35f4">
+          <AttributeID>Region 2</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3acedb13-50c4-4606-b472-64cfe788c8d9">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="a36b50de-b5bf-4bfe-81e7-7505cf48880e">
+      <ID>Fact Crop Produce</ID>
+      <Name>Fact Crop Produce</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e1518b18-227f-4877-a3fc-e5b86ec08e01">
+          <ID>Harvest Amount</ID>
+          <Name>Harvest Amount</Name>
+          <Source dwd:design-time-name="55cbc3d7-0f6d-4021-a57c-2a019b5351a7">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ea19d097-9553-4b64-a06f-e3cd64ce9438">
+              <TableID>dbo_fact_crop_produce</TableID>
+              <ColumnID>harvest_amount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="20d5ac1b-2033-4c3e-8248-0400f7b97245">
+          <ID>Harvest Year</ID>
+          <Name>Harvest Year</Name>
+          <Source dwd:design-time-name="61c50a03-8fff-4a1f-9e0a-d57dc139989f">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b7b5cc61-fbe8-4a9e-8033-27a105c3c584">
+              <TableID>dbo_fact_crop_produce</TableID>
+              <ColumnID>harvest_year</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c9ecf0e2-0bca-4c9b-92a1-d1048f5d6f31">
+          <ID>Fact Crop Produce Count</ID>
+          <Name>Fact Crop Produce Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="78a2090e-f687-4019-8bfe-d05a5c0926fc">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7ed45c99-df78-465b-a5fe-005179558145">
+              <TableID>dbo_fact_crop_produce</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="593a48e8-88e1-41c0-9670-bede14718366">
+          <CubeDimensionID>Dim Population</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="86222648-b462-4d8d-9520-80406e21103e">
+              <AttributeID>Id Dim Population</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5f4a4e6a-8bd5-4145-a0ff-27b7134a0c44">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b62d4538-ea13-431d-9477-896e3ef2cf49">
+                    <TableID>dbo_fact_crop_produce</TableID>
+                    <ColumnID>id_dim_population</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8389139a-be1d-4517-9878-909dfe1d84b9">
+          <CubeDimensionID>Dim Crop</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47726733-1880-40c4-9003-3fd158c21a2e">
+              <AttributeID>Id Dim Crop</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0a0022b3-3198-4cb6-8105-72fce3511243">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6f9c3336-9e62-40da-ad31-48ac7f5b0764">
+                    <TableID>dbo_fact_crop_produce</TableID>
+                    <ColumnID>id_dim_crop</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="683d24d5-f47a-42cd-a81d-0f7f92c1b2e6">
+          <CubeDimensionID>Dim Climate</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="77619807-9cd0-4d27-9a47-0062fb220c14">
+              <AttributeID>Id Dim Climate</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cb2170ba-0ea8-4336-98df-4e8602c5bf22">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="03a01f0e-1727-44fb-b1d7-391501b697b2">
+                    <TableID>dbo_fact_crop_produce</TableID>
+                    <ColumnID>id_dim_climate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b210f232-1813-415e-9d72-d85467859c60">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="92284766-7031-4c3c-822b-12f41e122b33">
+              <AttributeID>Id Dim Location</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dd67570e-e134-4e7f-a9ae-5767157acde3">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="78a99377-6e2c-4604-891b-8f1df325a39d">
+                    <TableID>dbo_fact_crop_produce</TableID>
+                    <ColumnID>id_dim_location</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="706a0613-d72b-4993-a147-a190b94d6c26">
+    <DataSourceViewID>CP Monitor</DataSourceViewID>
+  </Source>
+</Cube>

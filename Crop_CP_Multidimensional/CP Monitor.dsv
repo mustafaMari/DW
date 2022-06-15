@@ -1,0 +1,195 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="53b29aa0-57db-4680-98df-ce8e3c495244" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CP Monitor</ID>
+  <Name>CP Monitor</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>CP Monitor</DataSourceID>
+  <Schema>
+    <xs:schema id="CP_x0020_Monitor" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="CP_x0020_Monitor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="afd249c5-2206-47c1-8e52-6356f4aa9a40">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_dim_climate" msprop:design-time-name="14dae983-f7e0-459c-ad7e-c0344904b07e" msprop:DbTableName="dim_climate" msprop:FriendlyName="dim_climate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_climate" msprop:design-time-name="aadaab8c-6154-499e-b3a7-068a08b0eb74" msprop:DbColumnName="id_dim_climate" msprop:FriendlyName="id_dim_climate" type="xs:int" />
+                  <xs:element name="year" msprop:design-time-name="7c5ef448-b984-40c8-be57-2d1ff39c7adc" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" />
+                  <xs:element name="loti_annual_mean" msprop:design-time-name="e5754b7d-1933-4338-8137-9c7f879c4197" msprop:DbColumnName="loti_annual_mean" msprop:FriendlyName="loti_annual_mean" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_crop" msprop:design-time-name="e3c9a7c8-0cb0-4489-8857-3cf0c1587431" msprop:DbTableName="dim_crop" msprop:FriendlyName="dim_crop" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_crop" msprop:design-time-name="f320ef4c-7e02-4138-8563-ff323c047b46" msprop:DbColumnName="id_dim_crop" msprop:FriendlyName="id_dim_crop" type="xs:int" />
+                  <xs:element name="item_code" msprop:design-time-name="aa54e973-c2b2-49f7-b203-9acc592144b0" msprop:DbColumnName="item_code" msprop:FriendlyName="item_code" type="xs:int" />
+                  <xs:element name="item_name" msprop:design-time-name="219bfb7c-cd3d-4a8b-90bb-f3b5cc015da9" msprop:DbColumnName="item_name" msprop:FriendlyName="item_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="element_code" msprop:design-time-name="cea743af-d3bf-4d65-a5a7-37eb88d046af" msprop:DbColumnName="element_code" msprop:FriendlyName="element_code" type="xs:int" />
+                  <xs:element name="element_name" msprop:design-time-name="173409f5-946a-4d96-9e59-01cd89c10d6b" msprop:DbColumnName="element_name" msprop:FriendlyName="element_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_location" msprop:design-time-name="919c4b17-fddf-4e4b-a452-6b8bda2fd025" msprop:DbTableName="dim_location" msprop:FriendlyName="dim_location" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_location" msprop:design-time-name="a493e228-94a2-46eb-a9f4-5df36a80af51" msprop:DbColumnName="id_dim_location" msprop:FriendlyName="id_dim_location" type="xs:int" />
+                  <xs:element name="continent" msprop:design-time-name="16c52273-c0c7-43a1-b76c-22501f57d7d1" msprop:DbColumnName="continent" msprop:FriendlyName="continent">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country" msprop:design-time-name="26331824-bc83-4517-a02d-d48a8fba2dd5" msprop:DbColumnName="country" msprop:FriendlyName="country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country_area" msprop:design-time-name="be4d0dcf-6637-45dc-b8c2-47f7e38b1cd2" msprop:DbColumnName="country_area" msprop:FriendlyName="country_area" type="xs:decimal" />
+                  <xs:element name="region_1" msprop:design-time-name="9a49a84c-9d34-45bd-94c8-446ad3dc3ff8" msprop:DbColumnName="region_1" msprop:FriendlyName="region_1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region_2" msprop:design-time-name="4bf5ed07-1d11-4c10-9c73-13003300114e" msprop:DbColumnName="region_2" msprop:FriendlyName="region_2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_population" msprop:design-time-name="acea69df-709e-4d2e-b540-6ed7051d63a0" msprop:DbTableName="dim_population" msprop:FriendlyName="dim_population" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dim_population" msprop:design-time-name="54074ed9-976c-4c18-aac0-275ca57ac90c" msprop:DbColumnName="id_dim_population" msprop:FriendlyName="id_dim_population" type="xs:int" />
+                  <xs:element name="country" msprop:design-time-name="5a47bc9d-9f2c-480a-b4fe-936121fe1061" msprop:DbColumnName="country" msprop:FriendlyName="country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="year" msprop:design-time-name="cc491258-449a-4d3b-a939-1b331d86887b" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" />
+                  <xs:element name="country_population" msprop:design-time-name="ed77e956-f40d-4e46-ab1c-de19c99819db" msprop:DbColumnName="country_population" msprop:FriendlyName="country_population" type="xs:int" />
+                  <xs:element name="population_density" msprop:design-time-name="d2596d05-0704-4050-b4b2-1e7f49b5f561" msprop:DbColumnName="population_density" msprop:FriendlyName="population_density" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_fact_crop_produce" msprop:design-time-name="d83c4527-e540-45c9-ab97-3872a2c20910" msprop:DbTableName="fact_crop_produce" msprop:FriendlyName="fact_crop_produce" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_fact_crop_produce" msprop:design-time-name="df40a851-5f59-4579-b2e3-56f3b425c41f" msprop:DbColumnName="id_fact_crop_produce" msprop:FriendlyName="id_fact_crop_produce" type="xs:int" />
+                  <xs:element name="id_dim_crop" msprop:design-time-name="ae59c877-b148-48a3-8e8b-a53844f5f5c4" msprop:DbColumnName="id_dim_crop" msprop:FriendlyName="id_dim_crop" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_dim_location" msprop:design-time-name="9b57248f-ce4d-447a-9442-03b166843922" msprop:DbColumnName="id_dim_location" msprop:FriendlyName="id_dim_location" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_dim_population" msprop:design-time-name="42259769-863b-480a-9281-30bc5ebecc8d" msprop:DbColumnName="id_dim_population" msprop:FriendlyName="id_dim_population" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_dim_climate" msprop:design-time-name="1d58ce0f-f1cd-4651-869d-3d95ea94fadf" msprop:DbColumnName="id_dim_climate" msprop:FriendlyName="id_dim_climate" type="xs:int" minOccurs="0" />
+                  <xs:element name="harvest_amount" msprop:design-time-name="3da8960a-8c25-40a0-a032-18c20c478d20" msprop:DbColumnName="harvest_amount" msprop:FriendlyName="harvest_amount" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="harvest_amount_unit" msprop:design-time-name="cffd1dd4-b46d-4e7a-8ffe-c91cc9daaa1e" msprop:DbColumnName="harvest_amount_unit" msprop:FriendlyName="harvest_amount_unit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="harvest_year" msprop:design-time-name="2686d2db-9416-43c9-be4a-d86da353388b" msprop:DbColumnName="harvest_year" msprop:FriendlyName="harvest_year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_climate" />
+          <xs:field xpath="id_dim_climate" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_crop_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_crop" />
+          <xs:field xpath="id_dim_crop" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_location_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_location" />
+          <xs:field xpath="id_dim_location" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_population_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_population" />
+          <xs:field xpath="id_dim_population" />
+        </xs:unique>
+        <xs:unique name="dbo_fact_crop_produce_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_fact_crop_produce" />
+          <xs:field xpath="id_fact_crop_produce" />
+        </xs:unique>
+        <xs:keyref name="FK__fact_crop__id_di__5224328E" refer="dbo_dim_location_Constraint1">
+          <xs:selector xpath=".//dbo_fact_crop_produce" />
+          <xs:field xpath="id_dim_location" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact_crop__id_di__540C7B00" refer="Constraint1">
+          <xs:selector xpath=".//dbo_fact_crop_produce" />
+          <xs:field xpath="id_dim_climate" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact_crop__id_di__51300E55" refer="dbo_dim_crop_Constraint1">
+          <xs:selector xpath=".//dbo_fact_crop_produce" />
+          <xs:field xpath="id_dim_crop" />
+        </xs:keyref>
+        <xs:keyref name="FK__fact_crop__id_di__531856C7" refer="dbo_dim_population_Constraint1">
+          <xs:selector xpath=".//dbo_fact_crop_produce" />
+          <xs:field xpath="id_dim_population" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <CP_x0020_Monitor xmlns="" />
+  </Schema>
+</DataSourceView>
