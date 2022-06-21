@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="122"
-  DTS:VersionGUID="{47328E75-53EF-4180-A0D2-B037945A8A53}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{BB24B3D0-479C-4BBA-9E5D-5AB08DAB6A95}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1657,16 +1657,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country (or dependency)"
-              DTS:DTSID="{A84A20DD-8F96-41CC-9607-2C133231F463}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Land Area (Km²)"
-              DTS:DTSID="{31F5BF28-47F0-4FC5-8190-BC6B256797CC}"
+              DTS:DTSID="{BE5828AC-3F3B-4864-AE75-E69047A0647F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1675,7 +1666,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Region 1"
-              DTS:DTSID="{6133E75B-ECAF-44B7-ADFB-8E5312DE129E}"
+              DTS:DTSID="{179433D3-38FC-4BBD-8C37-149AE44B4727}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1684,7 +1675,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Region 2"
-              DTS:DTSID="{808CC909-37AA-4426-92E0-4517A2ED24E1}"
+              DTS:DTSID="{956D5B3E-DAE7-4847-9CA1-752233F85844}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Countries or Areas Continent"
+              DTS:DTSID="{30037B4C-ECE5-4905-98D1-6A722F436832}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1692,8 +1692,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Countries or Areas Continent"
-              DTS:DTSID="{1BA05E9C-A1D3-4556-8118-B1D74305AEBB}"
+              DTS:ObjectName="Land Area (Km²)"
+              DTS:DTSID="{4403A8AD-831A-4208-8851-56411F490B4A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1720,7 +1720,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="Flat File Source Error Output Column"
-              DTS:DTSID="{8B297168-9F1D-4A9E-B96B-CD745DD2B3EF}"
+              DTS:DTSID="{09249E66-B2AC-4A95-A825-50D27549B20E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1728,7 +1728,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{929492B5-00F9-4063-BB28-5FF6090B22DE}"
+              DTS:DTSID="{EB848E9F-F9B4-48A2-B8D9-D101AD1EF5AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1736,7 +1736,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{2B2E8B7C-424D-4312-AC7A-78EA991C46CA}"
+              DTS:DTSID="{B53FBBA4-D174-41DA-A0E0-A8254147BB52}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1802,6 +1802,71 @@
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Continent"
               DTS:DTSID="{B37E0E10-EE08-4930-BD79-0ACC914815FF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Location Test Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3DB2A2D8-95C7-4BAF-9A11-564CB207F956}"
+      DTS:ObjectName="Location Test Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Mustafa\OneDrive\Desktop\Mufasa\Uni\DW\Datasets\Test DS\Location.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country (or dependency)"
+              DTS:DTSID="{5A532D22-6D8C-417E-9F80-9FEB2A7270D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Land Area (Km?)"
+              DTS:DTSID="{CB56BABA-E84B-4580-AFD3-6B2F5EAFE5E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Countries or Areas Region 1"
+              DTS:DTSID="{643956DB-5101-461C-9EED-917194FC2173}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Countries or Areas Region 2"
+              DTS:DTSID="{ED9675D0-ADF4-4E41-BFE3-8CEAB62468CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Countries or Areas Continent"
+              DTS:DTSID="{740FF791-2F44-4E3E-A10D-CB4B3339A5E5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2281,16 +2346,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country (or dependency)"
-              DTS:DTSID="{2BC412AD-3D85-417C-B06F-5DB650CE0F4F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Land Area (Km²)"
-              DTS:DTSID="{435767BB-D913-4AA3-A28E-53BE2FE3FD35}"
+              DTS:DTSID="{489DDA64-9196-40B2-999A-D36F89926B43}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2299,7 +2355,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Region 1"
-              DTS:DTSID="{06BDBDA3-1EAE-4045-A386-FEF52CDAB936}"
+              DTS:DTSID="{89A8CD39-0F2F-4875-8D44-8977B2B1127F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2308,7 +2364,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Region 2"
-              DTS:DTSID="{D6BF8397-AD53-4C5D-80A3-68CDC6D1843F}"
+              DTS:DTSID="{3CD00BA1-1EDC-41FE-813B-0F6997A635EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2317,7 +2373,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Countries or Areas Continent"
-              DTS:DTSID="{2255D428-59A1-4359-B9AE-553E1E324853}"
+              DTS:DTSID="{405B8824-F49B-4BD8-8BC8-9B1ADC8A3E41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Land Area (Km²)"
+              DTS:DTSID="{33A651A1-0306-4110-8215-2243813F76DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2325,7 +2390,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{F7B4EC22-9D68-4E5E-82BA-333C027838BE}"
+              DTS:DTSID="{9137FED8-5920-4199-9B41-6BBE97F5E610}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2333,7 +2398,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{743A8905-138C-4199-8485-01316D73332B}"
+              DTS:DTSID="{1516C7C5-9169-442E-93A3-390B00F872FA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -7202,28 +7267,6 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].Columns[Land Area (Km²)]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].ExternalColumns[Land Area (Km²)]"
-                      length="255"
-                      lineageId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].Columns[Land Area (Km²)]"
-                      name="Land Area (Km²)"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].Columns[Countries or Areas Region 1]"
                       codePage="1250"
                       dataType="str"
@@ -7289,6 +7332,28 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].Columns[Land Area (Km²)]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].ExternalColumns[Land Area (Km²)]"
+                      length="255"
+                      lineageId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].Columns[Land Area (Km²)]"
+                      name="Land Area (Km²)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7298,12 +7363,6 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       dataType="str"
                       length="255"
                       name="Country (or dependency)" />
-                    <externalMetadataColumn
-                      refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].ExternalColumns[Land Area (Km²)]"
-                      codePage="1250"
-                      dataType="str"
-                      length="255"
-                      name="Land Area (Km²)" />
                     <externalMetadataColumn
                       refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].ExternalColumns[Countries or Areas Region 1]"
                       codePage="1250"
@@ -7322,6 +7381,12 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       dataType="str"
                       length="255"
                       name="Countries or Areas Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location\Location attributes data source.Outputs[Flat File Source Output].ExternalColumns[Land Area (Km²)]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Land Area (Km²)" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -10816,9 +10881,9 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
               startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
-              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Inputs[Derived Column Input]"
+              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Output]" />
+              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
               endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Convery year, population and density data types.Inputs[Data Conversion Input]"
@@ -10826,9 +10891,9 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
               startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
-              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
+              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
+              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Flat File Source Error Output]"
               endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Population data source Error.Inputs[Flat File Destination Input]"
@@ -11031,7 +11096,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
         <NodeLayout
           Size="372.8,41.6"
           Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Location"
-          TopLeft="36.285716402287,196.705884873248" />
+          TopLeft="35.5714306758371,197.470590766326" />
         <NodeLayout
           Size="383.2,41.6"
           Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population"
@@ -11050,26 +11115,26 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-362.085715635943,96.1058841439676"
+              EndConnector="-362.800001362393,96.8705900370456"
               Start="0,0"
-              End="-362.085715635943,88.6058841439676">
+              End="-362.800001362393,89.3705900370456">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.1067092536076" />
+                    End="0,29.3701363672766" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,29.1067092536076"
-                    Point2="0,33.1067092536076"
-                    Point3="-4,33.1067092536076" />
+                    Point1="0,29.3701363672766"
+                    Point2="0,33.3701363672766"
+                    Point3="-4,33.3701363672766" />
                   <mssgle:LineSegment
-                    End="-358.085715635943,33.1067092536076" />
+                    End="-358.800001362393,33.3701363672766" />
                   <mssgle:CubicBezierSegment
-                    Point1="-358.085715635943,33.1067092536076"
-                    Point2="-362.085715635943,33.1067092536076"
-                    Point3="-362.085715635943,37.1067092536076" />
+                    Point1="-358.800001362393,33.3701363672766"
+                    Point2="-362.800001362393,33.3701363672766"
+                    Point3="-362.800001362393,37.3701363672766" />
                   <mssgle:LineSegment
-                    End="-362.085715635943,88.6058841439676" />
+                    End="-362.800001362393,89.3705900370456" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11084,26 +11149,26 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="103.942852836726,58.7058763042044"
+              EndConnector="103.942852836726,58.705876304204"
               Start="0,0"
-              End="96.4428528367256,58.7058763042044">
+              End="96.442852836726,58.705876304204">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47.9714264183628,0" />
+                    End="47.971426418363,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="47.9714264183628,0"
-                    Point2="51.9714264183628,0"
-                    Point3="51.9714264183628,4" />
+                    Point1="47.971426418363,0"
+                    Point2="51.971426418363,0"
+                    Point3="51.971426418363,4" />
                   <mssgle:LineSegment
-                    End="51.9714264183628,54.7058763042044" />
+                    End="51.971426418363,54.705876304204" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.9714264183628,54.7058763042044"
-                    Point2="51.9714264183628,58.7058763042044"
-                    Point3="55.9714264183628,58.7058763042044" />
+                    Point1="51.971426418363,54.705876304204"
+                    Point2="51.971426418363,58.705876304204"
+                    Point3="55.971426418363,58.705876304204" />
                   <mssgle:LineSegment
-                    End="96.4428528367256,58.7058763042044" />
+                    End="96.442852836726,58.705876304204" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11136,18 +11201,18 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="223.285716444862,238.305884873248">
+          TopLeft="222.928573581637,239.070590766326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.047062030218"
+              EndConnector="0,53.28235613714"
               Start="0,0"
-              End="0,46.547062030218">
+              End="0,45.78235613714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.547062030218" />
+                    End="0,45.78235613714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11184,26 +11249,48 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="374.914282916517,100.45882284303"
+              EndConnector="374.914282916516,100.458822843031"
               Start="0,0"
-              End="374.914282916517,92.9588228430303">
+              End="374.914282916516,92.9588228430306">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.6062165646559" />
+                    End="0,30.606216564656" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.6062165646559"
-                    Point2="0,34.6062165646559"
-                    Point3="4,34.6062165646559" />
+                    Point1="0,30.606216564656"
+                    Point2="0,34.606216564656"
+                    Point3="4,34.606216564656" />
                   <mssgle:LineSegment
-                    End="370.914282916517,34.6062165646559" />
+                    End="370.914282916516,34.606216564656" />
                   <mssgle:CubicBezierSegment
-                    Point1="370.914282916517,34.6062165646559"
-                    Point2="374.914282916517,34.6062165646559"
-                    Point3="374.914282916517,38.6062165646559" />
+                    Point1="370.914282916516,34.606216564656"
+                    Point2="374.914282916516,34.606216564656"
+                    Point3="374.914282916516,38.606216564656" />
                   <mssgle:LineSegment
-                    End="374.914282916517,92.9588228430303" />
+                    End="374.914282916516,92.9588228430306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="1036.55714026616,242.658823572311">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.811766100094"
+              Start="0,0"
+              End="0,48.311766100094">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.311766100094" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11214,7 +11301,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="618.25714282065,238.717651337984">
+          TopLeft="618.257142820651,238.717651337984">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11247,17 +11334,17 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-57.5999981267107,0" />
+                    End="-57.5999981267104,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-57.5999981267107,0"
-                    Point2="-61.5999981267107,0"
-                    Point3="-61.5999981267107,4" />
+                    Point1="-57.5999981267104,0"
+                    Point2="-61.5999981267104,0"
+                    Point3="-61.5999981267104,4" />
                   <mssgle:LineSegment
-                    End="-61.5999981267107,48.588233535265" />
+                    End="-61.5999981267104,48.588233535265" />
                   <mssgle:CubicBezierSegment
-                    Point1="-61.5999981267107,48.588233535265"
-                    Point2="-61.5999981267107,52.588233535265"
-                    Point3="-65.5999981267107,52.588233535265" />
+                    Point1="-61.5999981267104,48.588233535265"
+                    Point2="-61.5999981267104,52.588233535265"
+                    Point3="-65.5999981267104,52.588233535265" />
                   <mssgle:LineSegment
                     End="-115.699996253421,52.588233535265" />
                 </mssgle:SegmentCollection>
@@ -11290,28 +11377,6 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="1036.55714026617,242.658823572311">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.8117661000947"
-              Start="0,0"
-              End="0,48.3117661000947">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.3117661000947" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -11325,10 +11390,6 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source"
           TopLeft="531,46" />
         <NodeLayout
-          Size="248,41.6"
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null"
-          TopLeft="532,137" />
-        <NodeLayout
           Size="254.4,41.6"
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor"
           TopLeft="529,327" />
@@ -11337,25 +11398,185 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source Error"
           TopLeft="951,48" />
         <NodeLayout
+          Size="280.8,41.6"
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor Error"
+          TopLeft="982,329" />
+        <NodeLayout
           Size="300.8,41.6"
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type Error"
           TopLeft="1003,229" />
         <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null Error"
-          TopLeft="971.5,133.5" />
+          Size="248,41.6"
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null"
+          TopLeft="532,137" />
         <NodeLayout
           Size="273.6,41.6"
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Destination for records when value is null"
           TopLeft="110,140" />
         <NodeLayout
-          Size="280.8,41.6"
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor Error"
-          TopLeft="982,329" />
+          Size="112.8,41.6"
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup"
+          TopLeft="218.114289387878,234.905885602529" />
         <NodeLayout
           Size="275.2,41.6"
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type"
           TopLeft="511,230" />
+        <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null Error"
+          TopLeft="971.5,133.5" />
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[ValueIsNotNull]"
+          TopLeft="652.25,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.0803125,16.87548828125,66.160625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[OLE DB Destination Error Output]"
+          TopLeft="783,349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="199,0"
+              Start="0,0"
+              End="191.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="191.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.54109375,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
+          TopLeft="274.514289387878,276.505885602529">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="381.685710612122,50.4941143974712"
+              Start="0,0"
+              End="381.685710612122,42.9941143974712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2470571987356" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2470571987356"
+                    Point2="0,25.2470571987356"
+                    Point3="4,25.2470571987356" />
+                  <mssgle:LineSegment
+                    End="377.685710612122,25.2470571987356" />
+                  <mssgle:CubicBezierSegment
+                    Point1="377.685710612122,25.2470571987356"
+                    Point2="381.685710612122,25.2470571987356"
+                    Point3="381.685710612122,29.2470571987356" />
+                  <mssgle:LineSegment
+                    End="381.685710612122,42.9941143974712" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="142.651468587311,30.2470571987356,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Output]"
+          TopLeft="655.5,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Error Output]"
+          TopLeft="779,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172,0"
+              Start="0,0"
+              End="164.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="164.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="18.62361328125,5,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Output]"
+          TopLeft="511,253.252942801264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-180.085710612122,0"
+              Start="0,0"
+              End="-172.585710612122,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-172.585710612122,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Error Output]"
           TopLeft="786,250.5">
@@ -11425,162 +11646,6 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-140.86390625,5,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[ValueIsNotNull]"
-          TopLeft="652.25,179">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-33.0803125,16.87548828125,66.160625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[OLE DB Destination Error Output]"
-          TopLeft="783,349">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="199,0"
-              Start="0,0"
-              End="191.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="191.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="22.54109375,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Output]"
-          TopLeft="655.5,88">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Error Output]"
-          TopLeft="779,68">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="172,0"
-              Start="0,0"
-              End="164.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="164.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="18.62361328125,5,127.2527734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup"
-          TopLeft="218.114289387878,234.905885602529" />
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Output]"
-          TopLeft="511,253.252942801264">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-180.085710612122,0"
-              Start="0,0"
-              End="-172.585710612122,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-172.585710612122,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
-          TopLeft="274.514289387878,276.505885602529">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="381.685710612122,50.4941143974712"
-              Start="0,0"
-              End="381.685710612122,42.9941143974712">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.2470571987356" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.2470571987356"
-                    Point2="0,25.2470571987356"
-                    Point3="4,25.2470571987356" />
-                  <mssgle:LineSegment
-                    End="377.685710612122,25.2470571987356" />
-                  <mssgle:CubicBezierSegment
-                    Point1="377.685710612122,25.2470571987356"
-                    Point2="381.685710612122,25.2470571987356"
-                    Point3="381.685710612122,29.2470571987356" />
-                  <mssgle:LineSegment
-                    End="381.685710612122,42.9941143974712" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="142.651468587311,30.2470571987356,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12540,7 +12605,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
+          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
           TopLeft="795.527272727272,617.145454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12584,7 +12649,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
+          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
           TopLeft="796.045454545455,390.727272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12765,7 +12830,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="6.6454314630686,5,132.1727734375,11.43359375"
+              BoundingBox="6.6454314630685,5,132.1727734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

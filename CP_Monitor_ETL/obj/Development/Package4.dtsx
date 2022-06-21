@@ -1,0 +1,2349 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/20/2022 2:51:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-222AJPA"
+  DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
+  DTS:DTSID="{B1F86CEB-6733-48CF-9047-E8555CEF1BB6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package4"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{055FEC4E-16E2-4E74-8976-2EABC6ABC365}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{89223EB2-AE53-49F7-BFE5-671CA1FDA58E}"
+      DTS:ObjectName="DESKTOP-222AJPA.CP_Monitor">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-222AJPA;Initial Catalog=CP_Monitor;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B1DB7228-606B-49A8-B1A2-2C0088DCAAAF}"
+      DTS:ObjectName="DESKTOP-222AJPA.CP_Monitor_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-222AJPA;Initial Catalog=CP_Monitor_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b246b966-e5e0-437c-ae1d-a82057e2064b}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[fact_crop_produce]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[harvest_amount]"
+                      cachedDataType="numeric"
+                      cachedName="harvest_amount"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[harvest_amount]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[harvest_amount_unit]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="harvest_amount_unit"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[harvest_amount_unit]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount_unit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_fact_crop_produce]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_fact_crop_produce"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_fact_crop_produce]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_fact_crop_produce]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_dim_crop]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_crop"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_crop]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_dim_location]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_location"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_location]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_dim_population]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_population"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_population]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_dim_climate]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_climate"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_climate]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_fact_crop_produce]"
+                      dataType="i4"
+                      name="id_fact_crop_produce" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_crop]"
+                      dataType="i4"
+                      name="id_dim_crop" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_location]"
+                      dataType="i4"
+                      name="id_dim_location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_population]"
+                      dataType="i4"
+                      name="id_dim_population" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_climate]"
+                      dataType="i4"
+                      name="id_dim_climate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[harvest_amount]"
+                      dataType="numeric"
+                      name="harvest_amount"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[harvest_amount_unit]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="harvest_amount_unit" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stage_fact_crop_produce]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_crop]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]"
+                      name="id_stage_dim_crop"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_location]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]"
+                      name="id_stage_dim_location"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_population]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]"
+                      name="id_stage_dim_population"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_climate]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]"
+                      name="id_stage_dim_climate"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_amount]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount]"
+                      name="harvest_amount"
+                      precision="18"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount_unit]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_amount_unit]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_amount_unit]"
+                      name="harvest_amount_unit"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_year]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_year]"
+                      name="harvest_year"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_country]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_country]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[harvest_country]"
+                      name="harvest_country"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[item_code]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_code]"
+                      name="item_code"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[element_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[element_code]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[element_code]"
+                      name="element_code"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_fact_crop_produce]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_fact_crop_produce]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_fact_crop_produce]"
+                      name="id_stage_fact_crop_produce"
+                      truncationRowDisposition="IgnoreFailure" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_crop]"
+                      dataType="i4"
+                      name="id_stage_dim_crop" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_location]"
+                      dataType="i4"
+                      name="id_stage_dim_location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_population]"
+                      dataType="i4"
+                      name="id_stage_dim_population" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_climate]"
+                      dataType="i4"
+                      name="id_stage_dim_climate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_amount]"
+                      dataType="numeric"
+                      name="harvest_amount"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_amount_unit]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="harvest_amount_unit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_year]"
+                      dataType="i4"
+                      name="harvest_year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[harvest_country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="harvest_country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[item_code]"
+                      dataType="i4"
+                      name="item_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[element_code]"
+                      dataType="i4"
+                      name="element_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_fact_crop_produce]"
+                      dataType="i4"
+                      name="id_stage_fact_crop_produce" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_fact_crop_produce]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_fact_crop_produce]"
+                      name="id_stage_fact_crop_produce" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_crop]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_crop]"
+                      name="id_stage_dim_crop" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_location]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_location]"
+                      name="id_stage_dim_location" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_population]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_population]"
+                      name="id_stage_dim_population" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_climate]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_climate]"
+                      name="id_stage_dim_climate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_amount]"
+                      name="harvest_amount"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_amount_unit]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_amount_unit]"
+                      name="harvest_amount_unit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_year]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_year]"
+                      name="harvest_year" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[harvest_country]"
+                      name="harvest_country" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[item_code]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[item_code]"
+                      name="item_code" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[element_code]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[element_code]"
+                      name="element_code" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populate Actual DB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{a2cfc00f-d406-4d4a-8054-9c3e4cccb84c}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate Actual DB"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dim_climate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[loti_annual_mean]"
+                      cachedDataType="numeric"
+                      cachedName="loti_annual_mean"
+                      cachedPrecision="4"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[loti_annual_mean]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[loti_annual_mean]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_stage_dim_climate]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_climate"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_climate]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_climate]"
+                      dataType="i4"
+                      name="id_dim_climate" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[loti_annual_mean]"
+                      dataType="numeric"
+                      name="loti_annual_mean"
+                      precision="4"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dim_crop]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[item_code]"
+                      cachedDataType="i4"
+                      cachedName="item_code"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[item_code]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_code]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[item_name]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="item_name"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[item_name]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_name]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[element_code]"
+                      cachedDataType="i4"
+                      cachedName="element_code"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[element_code]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_code]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[element_name]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="element_name"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[element_name]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_name]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[id_stage_dim_crop]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_crop"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_crop]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_crop]"
+                      dataType="i4"
+                      name="id_dim_crop" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[item_code]"
+                      dataType="i4"
+                      name="item_code" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[item_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="item_name" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[element_code]"
+                      dataType="i4"
+                      name="element_code" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[element_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="element_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Destination 2"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dim_location]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Destination 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[continent]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="continent"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[continent]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[continent]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[country_area]"
+                      cachedDataType="numeric"
+                      cachedName="country_area"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[country_area]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country_area]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[region_1]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="region_1"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[region_1]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_1]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[region_2]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="region_2"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[region_2]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_2]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].Columns[id_stage_dim_location]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_location"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_location]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_location]"
+                      dataType="i4"
+                      name="id_dim_location" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[continent]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="continent" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[country_area]"
+                      dataType="numeric"
+                      name="country_area"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[region_1]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="region_1" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input].ExternalColumns[region_2]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="region_2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Destination 2.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Destination 3"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 3"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dim_population]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Destination 3.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[country_population]"
+                      cachedDataType="i4"
+                      cachedName="country_population"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[country_population]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country_population]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[population_density]"
+                      cachedDataType="i4"
+                      cachedName="population_density"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[population_density]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[population_density]" />
+                    <inputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[id_stage_dim_population]"
+                      cachedDataType="i4"
+                      cachedName="id_stage_dim_population"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_population]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[id_dim_population]"
+                      dataType="i4"
+                      name="id_dim_population" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[country_population]"
+                      dataType="i4"
+                      name="country_population" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[population_density]"
+                      dataType="i4"
+                      name="population_density" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Destination 3.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stage_dim_climate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_climate]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_stage_dim_climate]"
+                      name="id_stage_dim_climate"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[loti_annual_mean]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[loti_annual_mean]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].Columns[loti_annual_mean]"
+                      name="loti_annual_mean"
+                      precision="4"
+                      scale="2"
+                      truncationRowDisposition="IgnoreFailure" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_climate]"
+                      dataType="i4"
+                      name="id_stage_dim_climate" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[loti_annual_mean]"
+                      dataType="numeric"
+                      name="loti_annual_mean"
+                      precision="4"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_climate]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_climate]"
+                      name="id_stage_dim_climate" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[year]"
+                      name="year" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[loti_annual_mean]"
+                      dataType="numeric"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[loti_annual_mean]"
+                      name="loti_annual_mean"
+                      precision="4"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Source 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stage_dim_crop]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Source 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_crop]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[id_stage_dim_crop]"
+                      name="id_stage_dim_crop"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[item_code]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_code]"
+                      name="item_code"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_name]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[item_name]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[item_name]"
+                      name="item_name"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[element_code]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_code]"
+                      name="element_code"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_name]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[element_name]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[element_name]"
+                      name="element_name"
+                      truncationRowDisposition="IgnoreFailure" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_crop]"
+                      dataType="i4"
+                      name="id_stage_dim_crop" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[item_code]"
+                      dataType="i4"
+                      name="item_code" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[item_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="item_name" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[element_code]"
+                      dataType="i4"
+                      name="element_code" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[element_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="element_name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_crop]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_crop]"
+                      name="id_stage_dim_crop" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[item_code]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[item_code]"
+                      name="item_code" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[item_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[item_name]"
+                      name="item_name" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[element_code]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[element_code]"
+                      name="element_code" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[element_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[element_name]"
+                      name="element_name" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Source 2"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 2"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stage_dim_location]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Source 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_location]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[id_stage_dim_location]"
+                      name="id_stage_dim_location"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[continent]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[continent]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[continent]"
+                      name="continent"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country_area]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[country_area]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[country_area]"
+                      name="country_area"
+                      precision="18"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_1]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[region_1]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_1]"
+                      name="region_1"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_2]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[region_2]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].Columns[region_2]"
+                      name="region_2"
+                      truncationRowDisposition="IgnoreFailure" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_location]"
+                      dataType="i4"
+                      name="id_stage_dim_location" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[continent]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="continent" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[country_area]"
+                      dataType="numeric"
+                      name="country_area"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[region_1]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="region_1" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output].ExternalColumns[region_2]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="region_2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_location]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_location]"
+                      name="id_stage_dim_location" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[continent]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[continent]"
+                      name="continent" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[country_area]"
+                      dataType="numeric"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[country_area]"
+                      name="country_area"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[region_1]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[region_1]"
+                      name="region_1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[region_2]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[region_2]"
+                      name="region_2" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Actual DB\OLE DB Source 3"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 3"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stage_dim_population]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Actual DB\OLE DB Source 3.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-222AJPA.CP_Monitor_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_population]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[id_stage_dim_population]"
+                      name="id_stage_dim_population"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[year]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country_population]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[country_population]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[country_population]"
+                      name="country_population"
+                      truncationRowDisposition="IgnoreFailure" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[population_density]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[population_density]"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].Columns[population_density]"
+                      name="population_density"
+                      truncationRowDisposition="IgnoreFailure" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[id_stage_dim_population]"
+                      dataType="i4"
+                      name="id_stage_dim_population" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[country_population]"
+                      dataType="i4"
+                      name="country_population" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output].ExternalColumns[population_density]"
+                      dataType="i4"
+                      name="population_density" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_population]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[id_stage_dim_population]"
+                      name="id_stage_dim_population" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[country]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[year]"
+                      name="year" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[country_population]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[country_population]"
+                      name="country_population" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[population_density]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[population_density]"
+                      name="population_density" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populate Actual DB.Paths[OLE DB Source Output]"
+              endId="Package\Populate Actual DB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populate Actual DB\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Populate Actual DB.Paths[OLE DB Source Output1]"
+              endId="Package\Populate Actual DB\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populate Actual DB\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Populate Actual DB.Paths[OLE DB Source Output2]"
+              endId="Package\Populate Actual DB\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populate Actual DB\OLE DB Source 2.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Populate Actual DB.Paths[OLE DB Source Output3]"
+              endId="Package\Populate Actual DB\OLE DB Destination 3.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populate Actual DB\OLE DB Source 3.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{204BF7E8-ED29-4706-BC20-C18D2F6E2BC9}"
+      DTS:From="Package\Populate Actual DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Populate Actual DB"
+          TopLeft="321.428575880674,76.8235296477083" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="326.685718786473,175.611765553134" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="403.657147333573,118.423529647708">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.188235905426"
+              Start="0,0"
+              End="0,49.688235905426">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.688235905426" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Populate Actual DB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,49.6"
+          Id="Package\Populate Actual DB\OLE DB Destination"
+          TopLeft="50.7142865779449,135.352943074745" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Populate Actual DB\OLE DB Source 1"
+          TopLeft="322.857148355367,38.2352946538827" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populate Actual DB\OLE DB Destination 3"
+          TopLeft="780.000013283321,150.647060936298" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populate Actual DB\OLE DB Destination 1"
+          TopLeft="305.714290920569,138.411766647055" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Populate Actual DB\OLE DB Source 3"
+          TopLeft="739.805207404003,24.748663448695" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Populate Actual DB\OLE DB Source 2"
+          TopLeft="541.428580649045,36.7058828677274" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populate Actual DB\OLE DB Destination 2"
+          TopLeft="541.428580649045,147.588237363987" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Populate Actual DB\OLE DB Source"
+          TopLeft="58.5714295688941,38.2352946538826" />
+        <EdgeLayout
+          Id="Package\Populate Actual DB.Paths[OLE DB Source Output1]"
+          TopLeft="398.685719637968,79.8352946538827">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5764719931724"
+              Start="0,0"
+              End="0,51.0764719931724">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0764719931724" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Actual DB.Paths[OLE DB Source Output3]"
+          TopLeft="819.005207404003,66.348663448695">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.5948058793177,84.298397487603"
+              Start="0,0"
+              End="50.5948058793177,76.798397487603">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.1491987438015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.1491987438015"
+                    Point2="0,42.1491987438015"
+                    Point3="4,42.1491987438015" />
+                  <mssgle:LineSegment
+                    End="46.5948058793177,42.1491987438015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.5948058793177,42.1491987438015"
+                    Point2="50.5948058793177,42.1491987438015"
+                    Point3="50.5948058793177,46.1491987438015" />
+                  <mssgle:LineSegment
+                    End="50.5948058793177,76.798397487603" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Actual DB.Paths[OLE DB Source Output2]"
+          TopLeft="620.628580649045,78.3058828677273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.4,69.2823544962596"
+              Start="0,0"
+              End="10.4,61.7823544962596">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.6411772481298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.6411772481298"
+                    Point2="0,34.6411772481298"
+                    Point3="4,34.6411772481298" />
+                  <mssgle:LineSegment
+                    End="6.39999999999998,34.6411772481298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.39999999999998,34.6411772481298"
+                    Point2="10.4,34.6411772481298"
+                    Point3="10.4,38.6411772481298" />
+                  <mssgle:LineSegment
+                    End="10.4,61.7823544962596" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Actual DB.Paths[OLE DB Source Output]"
+          TopLeft="134.64285807342,79.8352946538826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5176484208618"
+              Start="0,0"
+              End="0,48.0176484208618">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.0176484208618" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Destination 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Source 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Source 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Destination 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Actual DB\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="474,178" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="479,84" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="556.5,125.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.4000000000001"
+              Start="0,0"
+              End="0,44.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
