@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/11/2022 4:19:38 PM"
@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
   DTS:DTSID="{CF3B06D8-0CFC-4520-8452-F12E60EA328F}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:VersionBuild="142"
-  DTS:VersionGUID="{BB24B3D0-479C-4BBA-9E5D-5AB08DAB6A95}">
+  DTS:VersionGUID="{B19B25EF-7991-4C00-8E6A-35177E1C2AA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3878,7 +3878,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4280,13 +4280,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[stage_dim_crop]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[stage_dim_crop]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[stage_dim_crop]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[stage_dim_crop]) [refTable]
 where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -5188,7 +5188,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5999,7 +5999,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6846,7 +6846,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -8919,7 +8919,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -9163,7 +9163,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -10881,9 +10881,9 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
               startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
-              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
+              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
+              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
               endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Convery year, population and density data types.Inputs[Data Conversion Input]"
@@ -10891,9 +10891,9 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
               startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
-              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Inputs[Derived Column Input]"
+              endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Output]" />
+              startId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
             <path
               refId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Flat File Source Error Output]"
               endId="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population\Population data source Error.Inputs[Flat File Destination Input]"
@@ -12605,7 +12605,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
+          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
           TopLeft="795.527272727272,617.145454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12649,7 +12649,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
+          Id="Package\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
           TopLeft="796.045454545455,390.727272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve

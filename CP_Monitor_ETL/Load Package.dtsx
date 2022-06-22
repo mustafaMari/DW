@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
   DTS:DTSID="{B1F86CEB-6733-48CF-9047-E8555CEF1BB6}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package4"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{17001E02-E39A-43E0-BFD2-594EB0913017}">
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{054F8CE0-2489-42E8-8D10-B45440A03ED3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4176,7 +4176,7 @@
                 <input
                   refId="Package\Populate Fact_CP\Fact_CP DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -4937,13 +4937,9 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160,41.6"
-          Id="Package\Populate Fact_CP"
-          TopLeft="778.828583629277,83.2352933776415" />
-        <NodeLayout
           Size="198.4,41.6"
           Id="Package\Populate Dim_Climate DB"
-          TopLeft="321.428575880674,76.8235296477083" />
+          TopLeft="321.428575880674,76.0588237546306" />
         <NodeLayout
           Size="168.8,41.6"
           Id="Package\Populate Dim_Crop"
@@ -4951,25 +4947,29 @@
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\Populate Dim_Location"
-          TopLeft="558.571438083844,158.294119867074" />
+          TopLeft="557.857152357394,158.294119867074" />
         <NodeLayout
           Size="196,41.6"
           Id="Package\Populate Dim_Population"
           TopLeft="553.571437998694,76.4705893077653" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Populate Fact_CP"
+          TopLeft="779.542869355727,83.9999992707192" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="418.585719339945,118.423529647708">
+          TopLeft="418.585719339946,117.658823754631">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.3176493324624"
+              EndConnector="0,42.0823552255403"
               Start="0,0"
-              End="0,33.8176493324624">
+              End="0,34.5823552255403">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.8176493324624" />
+                    End="0,34.5823552255403" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4984,14 +4984,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.6285752846269,0"
+              EndConnector="56.914289558177,0"
               Start="0,0"
-              End="50.1285752846269,0">
+              End="49.414289558177,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.1285752846269,0" />
+                    End="49.414289558177,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5002,18 +5002,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="651.671438041269,158.294119867074">
+          TopLeft="651.314295178044,158.294119867074">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-40.2235305593088"
+              EndConnector="0,-40.2235305593087"
               Start="0,0"
-              End="0,-32.7235305593088">
+              End="0,-32.7235305593087">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-32.7235305593088" />
+                    End="0,-32.7235305593087" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5024,18 +5024,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="749.571437998694,100.652941342703">
+          TopLeft="749.571437998694,101.035294289242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.2571456305835,0"
+              EndConnector="29.971431357033,0"
               Start="0,0"
-              End="21.7571456305835,0">
+              End="22.471431357033,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="21.7571456305835,0" />
+                    End="22.471431357033,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5048,152 +5048,6 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Populate Fact_CP">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\Populate Fact_CP\Dim_Fact_CP DB Source"
-          TopLeft="328.285711719065,51.1176465976609" />
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Populate Fact_CP\Fact_CP DB Destination"
-          TopLeft="321.142854539715,219.294118226193" />
-        <NodeLayout
-          Size="219.2,41.6"
-          Id="Package\Populate Fact_CP\Dim_Fact_CP DB Source Error"
-          TopLeft="688.942868589382,52.764706622358" />
-        <EdgeLayout
-          Id="Package\Populate Fact_CP.Paths[OLE DB Source Error Output]"
-          TopLeft="521.085711719065,72.7411766100095">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="167.857156870317,0"
-              Start="0,0"
-              End="160.357156870317,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="160.357156870317,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="16.7446721851583,5,126.8678125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="216,41.6"
-          Id="Package\Populate Fact_CP\Fact_CP DB Destination Error"
-          TopLeft="719.914296966183,217.941179527131" />
-        <EdgeLayout
-          Id="Package\Populate Fact_CP.Paths[OLE DB Destination Error Output]"
-          TopLeft="510.742854539715,239.417648876662">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="209.171442426468,0"
-              Start="0,0"
-              End="201.671442426468,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="201.671442426468,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="27.6268149632341,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Populate Fact_CP\Remove Duplicates"
-          TopLeft="338.571434337266,129.235295930123" />
-        <EdgeLayout
-          Id="Package\Populate Fact_CP.Paths[OLE DB Source Output]"
-          TopLeft="423.628573028166,92.7176465976609">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.5176493324624"
-              Start="0,0"
-              End="0,29.0176493324624">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.0176493324624" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Fact_CP.Paths[Sort Output]"
-          TopLeft="419.25714443849,170.835295930123">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.45882229607"
-              Start="0,0"
-              End="0,40.95882229607">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.95882229607" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populate Fact_CP\Fact_CP DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populate Fact_CP\Dim_Fact_CP DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Populate Dim_Climate DB">
     <LayoutInfo>
       <GraphLayout
@@ -5203,13 +5057,39 @@
           Id="Package\Populate Dim_Climate DB\Stage_Dim_Climate DB Source"
           TopLeft="410.571429568894,37.2352946538826" />
         <NodeLayout
+          Size="237.6,41.6"
+          Id="Package\Populate Dim_Climate DB\Dim_Climate DB Destination Error"
+          TopLeft="810,170" />
+        <NodeLayout
           Size="211.2,41.6"
           Id="Package\Populate Dim_Climate DB\Dim_Climate DB Destination"
-          TopLeft="420.714286577945,297.352943074745" />
+          TopLeft="416.714286577945,175.352943074745" />
         <NodeLayout
           Size="249.6,41.6"
           Id="Package\Populate Dim_Climate DB\Stage_Dim_Climate DB Source Error"
           TopLeft="815,42" />
+        <EdgeLayout
+          Id="Package\Populate Dim_Climate DB.Paths[OLE DB Source Output]"
+          TopLeft="522.04285807342,78.8352946538826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,96.5176484208624"
+              Start="0,0"
+              End="0,89.0176484208624">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.0176484208624" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate Dim_Climate DB.Paths[OLE DB Source Error Output]"
           TopLeft="632.971429568894,60.4176473269413">
@@ -5234,54 +5114,28 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="237.6,41.6"
-          Id="Package\Populate Dim_Climate DB\Dim_Climate DB Destination Error"
-          TopLeft="823,292" />
         <EdgeLayout
           Id="Package\Populate Dim_Climate DB.Paths[OLE DB Destination Error Output]"
-          TopLeft="631.914286577945,315.476471537373">
+          TopLeft="627.914286577945,193.476471537373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="191.085713422055,0"
+              EndConnector="182.085713422055,0"
               Start="0,0"
-              End="183.585713422055,0">
+              End="174.585713422055,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="183.585713422055,0" />
+                    End="174.585713422055,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="18.5839504610276,5,146.4178125,11.43359375"
+              BoundingBox="14.0839504610274,5,146.4178125,11.43359375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dim_Climate DB.Paths[OLE DB Source Output]"
-          TopLeft="524.042858073419,78.8352946538826">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,218.517648420862"
-              Start="0,0"
-              End="0,211.017648420862">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,211.017648420862" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5319,17 +5173,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="236,41.6"
+          Id="Package\Populate Dim_Crop\Stage_Dim_Crop DB Source Error"
+          TopLeft="454.285714285714,63.7142857142857" />
+        <NodeLayout
           Size="197.6,41.6"
           Id="Package\Populate Dim_Crop\Dim_Crop DB Destination"
-          TopLeft="88.2857142857142,296.319329136029" />
+          TopLeft="79.2857142857142,158.319329136029" />
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Populate Dim_Crop\Dim_Crop DB Destination Error"
+          TopLeft="439.857142857143,154.714285714286" />
         <NodeLayout
           Size="209.6,41.6"
           Id="Package\Populate Dim_Crop\Stage_Dim_Crop DB Source"
           TopLeft="77.142857434798,60" />
-        <NodeLayout
-          Size="236,41.6"
-          Id="Package\Populate Dim_Crop\Stage_Dim_Crop DB Source Error"
-          TopLeft="454.285714285714,63.7142857142857" />
+        <EdgeLayout
+          Id="Package\Populate Dim_Crop.Paths[OLE DB Source Output]"
+          TopLeft="180.014285860256,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.719329136029"
+              Start="0,0"
+              End="0,49.219329136029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.219329136029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate Dim_Crop.Paths[OLE DB Source Error Output]"
           TopLeft="286.742857434798,82.6571428571428">
@@ -5354,54 +5234,28 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="224.8,41.6"
-          Id="Package\Populate Dim_Crop\Dim_Crop DB Destination Error"
-          TopLeft="522.857142857143,293.714285714286" />
         <EdgeLayout
           Id="Package\Populate Dim_Crop.Paths[OLE DB Destination Error Output]"
-          TopLeft="285.885714285714,315.816807425158">
+          TopLeft="276.885714285714,177.316807425158">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="236.971428571429,0"
+              EndConnector="162.971428571429,0"
               Start="0,0"
-              End="229.471428571429,0">
+              End="155.471428571429,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="229.471428571429,0" />
+                    End="155.471428571429,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="41.5268080357144,5,146.4178125,11.43359375"
+              BoundingBox="4.52680803571441,5,146.4178125,11.43359375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dim_Crop.Paths[OLE DB Source Output]"
-          TopLeft="184.514285860256,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,194.719329136029"
-              Start="0,0"
-              End="0,187.219329136029">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,187.219329136029" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5413,17 +5267,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="215.2,41.6"
-          Id="Package\Populate Dim_Location\Dim_Location DB Destination"
-          TopLeft="99.0000000000001,332.88235449626" />
-        <NodeLayout
           Size="227.2,41.6"
           Id="Package\Populate Dim_Location\Stage_Dim_Location DB Source"
           TopLeft="95.0000000000001,62" />
         <NodeLayout
+          Size="241.6,41.6"
+          Id="Package\Populate Dim_Location\Dim_Location DB Destination Error"
+          TopLeft="492,164" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Populate Dim_Location\Dim_Location DB Destination"
+          TopLeft="107,167.88235449626" />
+        <NodeLayout
           Size="253.6,41.6"
           Id="Package\Populate Dim_Location\Stage_Dim_Location DB Source Error"
           TopLeft="480,62" />
+        <EdgeLayout
+          Id="Package\Populate Dim_Location.Paths[OLE DB Source Output]"
+          TopLeft="211.6,103.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.28235449626"
+              Start="0,0"
+              End="0,56.78235449626">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.78235449626" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate Dim_Location.Paths[OLE DB Source Error Output]"
           TopLeft="322.2,82.8">
@@ -5448,54 +5328,28 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="241.6,41.6"
-          Id="Package\Populate Dim_Location\Dim_Location DB Destination Error"
-          TopLeft="514,329" />
         <EdgeLayout
           Id="Package\Populate Dim_Location.Paths[OLE DB Destination Error Output]"
-          TopLeft="314.2,351.74117724813">
+          TopLeft="322.2,186.74117724813">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="199.8,0"
+              EndConnector="169.8,0"
               Start="0,0"
-              End="192.3,0">
+              End="162.3,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="192.3,0" />
+                    End="162.3,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="22.94109375,5,146.4178125,11.43359375"
+              BoundingBox="7.94109375000001,5,146.4178125,11.43359375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populate Dim_Location.Paths[OLE DB Source Output]"
-          TopLeft="207.6,103.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,229.28235449626"
-              Start="0,0"
-              End="0,221.78235449626">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,221.78235449626" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5507,17 +5361,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="236.8,41.6"
-          Id="Package\Populate Dim_Population\Stage_Dim_Population DB Source"
-          TopLeft="63.805194120682,60" />
-        <NodeLayout
-          Size="225.6,41.6"
-          Id="Package\Populate Dim_Population\Dim_Population DB Destination"
-          TopLeft="62.0000000000001,294.898397487603" />
-        <NodeLayout
           Size="263.2,41.6"
           Id="Package\Populate Dim_Population\Stage_Dim_Population DB Source Error"
           TopLeft="434,64" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Populate Dim_Population\Dim_Population DB Destination"
+          TopLeft="73.0000000000002,164.898397487603" />
+        <NodeLayout
+          Size="252,41.6"
+          Id="Package\Populate Dim_Population\Dim_Population DB Destination Error"
+          TopLeft="437,164" />
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package\Populate Dim_Population\Stage_Dim_Population DB Source"
+          TopLeft="63.805194120682,60" />
+        <EdgeLayout
+          Id="Package\Populate Dim_Population.Paths[OLE DB Source Output]"
+          TopLeft="184.002597060341,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.298397487603"
+              Start="0,0"
+              End="0,55.798397487603">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.798397487603" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populate Dim_Population.Paths[OLE DB Source Error Output]"
           TopLeft="300.605194120682,82.8">
@@ -5542,48 +5422,85 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="252,41.6"
-          Id="Package\Populate Dim_Population\Dim_Population DB Destination Error"
-          TopLeft="456,291" />
         <EdgeLayout
           Id="Package\Populate Dim_Population.Paths[OLE DB Destination Error Output]"
-          TopLeft="287.6,313.749198743802">
+          TopLeft="298.6,185.249198743802">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="168.4,0"
+              EndConnector="138.4,0"
               Start="0,0"
-              End="160.9,0">
+              End="130.9,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="160.9,0" />
+                    End="130.9,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.24109374999996,5,146.4178125,11.43359375"
+              BoundingBox="-7.75890625000012,5,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Dim_Population\Dim_Population DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate Fact_CP">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Populate Fact_CP\Dim_Fact_CP DB Source Error"
+          TopLeft="688.942868589382,52.764706622358" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Populate Fact_CP\Fact_CP DB Destination"
+          TopLeft="321.142854539715,219.294118226193" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Populate Fact_CP\Fact_CP DB Destination Error"
+          TopLeft="719.914296966183,217.941179527131" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Populate Fact_CP\Remove Duplicates"
+          TopLeft="338.571434337266,129.235295930123" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Populate Fact_CP\Dim_Fact_CP DB Source"
+          TopLeft="328.285711719065,51.1176465976609" />
         <EdgeLayout
-          Id="Package\Populate Dim_Population.Paths[OLE DB Source Output]"
-          TopLeft="178.502597060341,101.6">
+          Id="Package\Populate Fact_CP.Paths[Sort Output]"
+          TopLeft="419.25714443849,170.835295930123">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,193.298397487603"
+              EndConnector="0,48.45882229607"
               Start="0,0"
-              End="0,185.798397487603">
+              End="0,40.95882229607">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,185.798397487603" />
+                    End="0,40.95882229607" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5592,11 +5509,94 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Fact_CP.Paths[OLE DB Source Output]"
+          TopLeft="423.628573028166,92.7176465976609">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.5176493324624"
+              Start="0,0"
+              End="0,29.0176493324624">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0176493324624" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Fact_CP.Paths[OLE DB Source Error Output]"
+          TopLeft="521.085711719065,72.7411766100095">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="167.857156870317,0"
+              Start="0,0"
+              End="160.357156870317,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="160.357156870317,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.7446721851583,5,126.8678125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populate Fact_CP.Paths[OLE DB Destination Error Output]"
+          TopLeft="510.742854539715,239.417648876662">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.171442426468,0"
+              Start="0,0"
+              End="201.671442426468,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="201.671442426468,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="27.6268149632341,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Populate Dim_Population\Dim_Population DB Destination">
+    design-time-name="Package\Populate Fact_CP\Fact_CP DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Fact_CP\Dim_Fact_CP DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -8,9 +8,6 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <ServerName>DESKTOP-222AJPA</ServerName>
-        <PathOnServer />
-        <StartObjectID>DBs Creation Package.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
@@ -19,7 +16,7 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2022-06-11T15:10:02.705182Z</Value>
+            <Value xsi:type="xsd:dateTime">2022-06-21T06:13:11.0822616Z</Value>
           </ConfigurationSetting>
         </ParameterConfigurationSensitiveValues>
       </Options>

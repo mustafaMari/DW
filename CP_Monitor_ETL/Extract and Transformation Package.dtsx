@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/19/2022 7:29:12 PM"
@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
   DTS:DTSID="{58FEFEBB-8EDF-4C06-918C-F76D74C10909}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="127"
-  DTS:VersionGUID="{8E3B09E9-C5FC-43EB-8A46-DF409B53E3F1}">
+  DTS:VersionBuild="128"
+  DTS:VersionGUID="{DB52518F-BAFF-438A-90B3-CB1CEFC15741}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6606,7 +6606,7 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -7642,13 +7642,13 @@
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[stage_dim_climate]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[stage_dim_climate]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[stage_dim_climate]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[stage_dim_climate]) [refTable]
 where [refTable].[year] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -8275,13 +8275,13 @@ where [refTable].[year] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[stage_dim_crop]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[stage_dim_crop]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[stage_dim_crop]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[stage_dim_crop]) [refTable]
 where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -8858,13 +8858,13 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[stage_dim_location]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[stage_dim_location]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[stage_dim_location]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[stage_dim_location]) [refTable]
 where [refTable].[country] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -9570,13 +9570,13 @@ where [refTable].[country] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[stage_dim_population]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[stage_dim_population]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[stage_dim_population]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[stage_dim_population]) [refTable]
 where [refTable].[country] = ? and [refTable].[year] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -10318,13 +10318,13 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_crop]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[dim_crop]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_crop]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[dim_crop]) [refTable]
 where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -12415,22 +12415,22 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   name="Flat File Source Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source.Outputs[Flat File Source Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output3]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB Error.Inputs[Flat File Destination Input]"
                   name="Lookup Error Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB.Outputs[Lookup Error Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output2]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output1]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB Error.Inputs[Flat File Destination Input]"
                   name="Lookup Error Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB.Outputs[Lookup Error Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output1]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output2]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB Error.Inputs[Flat File Destination Input]"
                   name="Lookup Error Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB.Outputs[Lookup Error Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output3]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB Error.Inputs[Flat File Destination Input]"
                   name="Lookup Error Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB.Outputs[Lookup Error Output]" />
@@ -12441,41 +12441,41 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db.Outputs[Lookup Error Output]" />
                 <path
                   refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output4]"
-                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor.Inputs[OLE DB Destination Input]"
+                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort.Inputs[Sort Input]"
                   name="Lookup Match Output"
-                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB.Outputs[Lookup Match Output]" />
+                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output3]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB.Inputs[Lookup Input]"
                   name="Lookup Match Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB.Outputs[Lookup Match Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output2]"
-                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort.Inputs[Sort Input]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
+                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB.Inputs[Lookup Input]"
                   name="Lookup Match Output"
-                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB.Outputs[Lookup Match Output]" />
+                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output1]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort 1.Inputs[Sort Input]"
                   name="Lookup Match Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db.Outputs[Lookup Match Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
-                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB.Inputs[Lookup Input]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output2]"
+                  endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor.Inputs[OLE DB Destination Input]"
                   name="Lookup Match Output"
-                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB.Outputs[Lookup Match Output]" />
+                  startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB.Outputs[Lookup Match Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output1]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB No Match.Inputs[Flat File Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB.Outputs[Lookup No Match Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output2]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output1]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB No Match.Inputs[Flat File Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB.Outputs[Lookup No Match Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output2]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db.Inputs[Lookup Input]"
                   name="Lookup No Match Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB.Outputs[Lookup No Match Output]" />
@@ -12500,12 +12500,12 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                   name="OLE DB Destination Error Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor.Outputs[OLE DB Destination Error Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output1]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output1]"
+                  refId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output]"
                   endId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort.Outputs[Sort Output]" />
@@ -13223,13 +13223,13 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_crop]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[dim_crop]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_crop]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[dim_crop]) [refTable]
 where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -13514,7 +13514,7 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -14505,13 +14505,13 @@ where [refTable].[item_code] = ? and [refTable].[element_code] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_climate]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[dim_climate]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_climate]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[dim_climate]) [refTable]
 where [refTable].[year] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -14752,7 +14752,7 @@ where [refTable].[year] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -15192,7 +15192,7 @@ where [refTable].[year] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="File System Task"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -15490,13 +15490,13 @@ where [refTable].[year] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_location]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[dim_location]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_location]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[dim_location]) [refTable]
 where [refTable].[country] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -15769,7 +15769,7 @@ where [refTable].[country] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -17261,7 +17261,7 @@ where [refTable].[country] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="File System Task"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -18268,13 +18268,13 @@ where [refTable].[country] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_population]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[dim_population]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_population]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[dim_population]) [refTable]
 where [refTable].[country] = ? and [refTable].[year] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -18615,7 +18615,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -18859,7 +18859,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -20958,20 +20958,20 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
                   name="Derived Column Error Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Error Output]" />
                 <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
+                  endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
+                  name="Derived Column Output"
+                  startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Inputs[Derived Column Input]"
                   name="Derived Column Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Convery year, population and density data types.Inputs[Data Conversion Input]"
                   name="Derived Column Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace blank density by 0.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
-                  endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\convert density and population from decimal to integer.Inputs[Data Conversion Input]"
-                  name="Derived Column Output"
-                  startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Calculate density where density is 0.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Flat File Source Error Output]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Population data source Error.Inputs[Flat File Destination Input]"
@@ -21013,20 +21013,20 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
                   name="OLE DB Source Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Get Country Area from Stage_dim_location.Outputs[OLE DB Source Output]" />
                 <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output]"
-                  endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Merge Join by country.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Sort by Country.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output1]"
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output2]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Merge Join by country.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Sort population by country.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output2]"
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Exisitng Duplicate.Inputs[Lookup Input]"
                   name="Sort Output"
                   startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Remove Duplicates.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output1]"
+                  endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Merge Join by country.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Sort by Country.Outputs[Sort Output]" />
                 <path
                   refId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Year is not null]"
                   endId="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Replace density nulls by 0.Inputs[Derived Column Input]"
@@ -21045,7 +21045,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="File System Task"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -21116,43 +21116,6 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="368.8,41.6"
-          Id="Package\Dim_Climate Container\Extract&amp;Transform Data from sources for Stage_DIM_Climate"
-          TopLeft="25.6571549970278,9.11764769158152" />
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Dim_Climate Container\File System Task"
-          TopLeft="130.571440127432,82.6588253955115" />
-        <EdgeLayout
-          Id="Package\Dim_Climate Container.PrecedenceConstraints[Constraint]"
-          TopLeft="209.51429756223,50.7176476915815">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.9411777039299"
-              Start="0,0"
-              End="0,24.4411777039299">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.4411777039299" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="400,145.6"
-          Size="400,188.8"
-          Id="Package\Dim_Climate Container"
-          TopLeft="695.768903768238,120.041644592406" />
         <NodeLayout
           Size="399.2,41.6"
           Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor"
@@ -21229,6 +21192,43 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           Id="Package\Crop Container"
           TopLeft="653.506121631081,393.274141379514" />
         <NodeLayout
+          Size="368.8,41.6"
+          Id="Package\Dim_Climate Container\Extract&amp;Transform Data from sources for Stage_DIM_Climate"
+          TopLeft="25.6571549970278,9.11764769158152" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Dim_Climate Container\File System Task"
+          TopLeft="130.571440127432,82.6588253955115" />
+        <EdgeLayout
+          Id="Package\Dim_Climate Container.PrecedenceConstraints[Constraint]"
+          TopLeft="209.51429756223,50.7176476915815">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.9411777039299"
+              Start="0,0"
+              End="0,24.4411777039299">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.4411777039299" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="400,145.6"
+          Size="400,188.8"
+          Id="Package\Dim_Climate Container"
+          TopLeft="695.768903768238,120.041644592406" />
+        <NodeLayout
           Size="385.6,41.6"
           Id="Package\Dim_Location Container\Extract&amp;Transform Data from sources for Stage_DIM_Location"
           TopLeft="22.6428574347981,16.517647144621" />
@@ -21303,28 +21303,6 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           Id="Package\Dim_Population Container"
           TopLeft="117.277099312151,420.782638348676" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="340.055386564762,356.726888655791">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.0557496928848"
-              Start="0,0"
-              End="0,56.5557496928848">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5557496928848" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="896.43751269966,308.841644592406">
           <EdgeLayout.Curve>
@@ -21368,9 +21346,1313 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="340.055386564762,356.726888655791">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.0557496928848"
+              Start="0,0"
+              End="0,56.5557496928848">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5557496928848" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Merge Join"
+          TopLeft="638.836363636364,480.4" />
+        <NodeLayout
+          Size="285.6,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db Error"
+          TopLeft="213.665587623896,216.045452266453" />
+        <NodeLayout
+          Size="280.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor Error"
+          TopLeft="1369.94545454546,816.6" />
+        <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null Error"
+          TopLeft="1470.13636363636,147.5" />
+        <NodeLayout
+          Size="300.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB"
+          TopLeft="886.236363636364,723.800000000001" />
+        <NodeLayout
+          Size="314.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB Error"
+          TopLeft="446.181818181818,630.545454545455" />
+        <NodeLayout
+          Size="254.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Join Duplicate columns into one Error"
+          TopLeft="184.545454545455,558.909090909091" />
+        <NodeLayout
+          Size="348,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB No Match"
+          TopLeft="1334.36363636364,720.545454545455" />
+        <NodeLayout
+          Size="311.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB Error"
+          TopLeft="1314.54545454545,474" />
+        <NodeLayout
+          Size="248,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source"
+          TopLeft="1029.63636363636,60" />
+        <NodeLayout
+          Size="287.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB Error"
+          TopLeft="1515.42857996785,338.449197625019" />
+        <NodeLayout
+          Size="288,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB"
+          TopLeft="887.236363636365,633.6" />
+        <NodeLayout
+          Size="259.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db"
+          TopLeft="618.993510501615,293.426470397872" />
+        <NodeLayout
+          Size="254.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor"
+          TopLeft="952.509090909091,821.963636363636" />
+        <NodeLayout
+          Size="248,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null"
+          TopLeft="1030.63636363636,151" />
+        <NodeLayout
+          Size="335.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB No Match"
+          TopLeft="1326.54545454545,633.272727272727" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Join Duplicate columns into one"
+          TopLeft="583.181818181819,555.309090909091" />
+        <NodeLayout
+          Size="284.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB"
+          TopLeft="886.236363636364,549.6" />
+        <NodeLayout
+          Size="300.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type Error"
+          TopLeft="1501.63636363636,243" />
+        <NodeLayout
+          Size="260.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB"
+          TopLeft="1012.46494479631,313.670592407207" />
+        <NodeLayout
+          Size="273.6,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Destination for records when value is null"
+          TopLeft="608.636363636364,154" />
+        <NodeLayout
+          Size="307.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db No Match"
+          TopLeft="203.863639556743,293.251336683901" />
+        <NodeLayout
+          Size="327.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB Error"
+          TopLeft="446.181818181818,719.272727272727" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort"
+          TopLeft="779.279221454335,401.978431703228" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort 1"
+          TopLeft="528.814935323425,407.34117679233" />
+        <NodeLayout
+          Size="332.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB No Match"
+          TopLeft="1320.18181818182,556" />
+        <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source Error"
+          TopLeft="1449.63636363636,62" />
+        <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type"
+          TopLeft="1009.63636363636,244" />
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output1]"
+          TopLeft="582.014935323425,448.94117679233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101.354761646272,31.4588232076704"
+              Start="0,0"
+              End="101.354761646272,23.9588232076704">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6451074133266" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6451074133266"
+                    Point2="0,18.6451074133266"
+                    Point3="4,18.6451074133266" />
+                  <mssgle:LineSegment
+                    End="97.3547616462723,18.6451074133266" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97.3547616462723,18.6451074133266"
+                    Point2="101.354761646272,18.6451074133266"
+                    Point3="101.354761646272,22.6451074133266" />
+                  <mssgle:LineSegment
+                    End="101.354761646272,23.9588232076704" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[OLE DB Destination Error Output]"
+          TopLeft="1206.90909090909,840.081818181818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="163.036363636364,0"
+              Start="0,0"
+              End="155.536363636364,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="155.536363636364,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="4.55927556818203,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Merge Join Output]"
+          TopLeft="700.409090909091,522">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.309090909091"
+              Start="0,0"
+              End="0,25.809090909091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.809090909091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output4]"
+          TopLeft="618.993510501615,314.138903540886">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107.929870944873,0"
+              Start="0,0"
+              End="-100.429870944873,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-100.429870944873,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.021322191186,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output3]"
+          TopLeft="1187.03636363636,742.972727272728">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.327272727276,0"
+              Start="0,0"
+              End="139.827272727276,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="139.827272727276,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.1072496448879,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output2]"
+          TopLeft="1012.46494479631,334.470592407207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-134.271434294691,-20.2441220093354"
+              Start="0,0"
+              End="-126.771434294691,-20.2441220093354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-63.1357171473456,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.1357171473456,0"
+                    Point2="-67.1357171473456,0"
+                    Point3="-67.1357171473456,-4" />
+                  <mssgle:LineSegment
+                    End="-67.1357171473456,-16.2441220093354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.1357171473456,-16.2441220093354"
+                    Point2="-67.1357171473456,-20.2441220093354"
+                    Point3="-71.1357171473456,-20.2441220093354" />
+                  <mssgle:LineSegment
+                    End="-126.771434294691,-20.2441220093354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-122.942103866096,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output1]"
+          TopLeft="1175.23636363637,654.236363636363">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="151.309090909085,0"
+              Start="0,0"
+              End="143.809090909085,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="143.809090909085,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.0981587357925,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output]"
+          TopLeft="1171.03636363636,573.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="149.145454545456,0"
+              Start="0,0"
+              End="141.645454545456,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="141.645454545456,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.016340553978,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
+          TopLeft="1033.93636363636,675.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.6000000000009"
+              Start="0,0"
+              End="0,41.1000000000009">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.1000000000009" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.7453125000005,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output1]"
+          TopLeft="748.593510501615,335.026470397872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-166.57857517819,72.3147063944577"
+              Start="0,0"
+              End="-166.57857517819,64.8147063944577">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1573531972288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.1573531972288"
+                    Point2="0,36.1573531972288"
+                    Point3="-4,36.1573531972288" />
+                  <mssgle:LineSegment
+                    End="-162.57857517819,36.1573531972288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-162.57857517819,36.1573531972288"
+                    Point2="-166.57857517819,36.1573531972288"
+                    Point3="-166.57857517819,40.1573531972288" />
+                  <mssgle:LineSegment
+                    End="-166.57857517819,64.8147063944577" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-131.480674307845,41.1573531972288,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output4]"
+          TopLeft="1142.86494479631,355.270592407207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-314.785723341972,46.7078392960205"
+              Start="0,0"
+              End="-314.785723341972,39.2078392960205">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3539196480102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3539196480102"
+                    Point2="0,23.3539196480102"
+                    Point3="-4,23.3539196480102" />
+                  <mssgle:LineSegment
+                    End="-310.785723341972,23.3539196480102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-310.785723341972,23.3539196480102"
+                    Point2="-314.785723341972,23.3539196480102"
+                    Point3="-314.785723341972,27.3539196480102" />
+                  <mssgle:LineSegment
+                    End="-314.785723341972,39.2078392960205" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-205.584248389736,28.3539196480102,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output3]"
+          TopLeft="1029.93636363636,591.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.4"
+              Start="0,0"
+              End="0,34.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.6453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output2]"
+          TopLeft="1036.63636363636,765.400000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.072727272727,56.5636363636351"
+              Start="0,0"
+              End="43.072727272727,49.0636363636351">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2818181818175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2818181818175"
+                    Point2="0,28.2818181818175"
+                    Point3="4,28.2818181818175" />
+                  <mssgle:LineSegment
+                    End="39.072727272727,28.2818181818175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.072727272727,28.2818181818175"
+                    Point2="43.072727272727,28.2818181818175"
+                    Point3="43.072727272727,32.2818181818175" />
+                  <mssgle:LineSegment
+                    End="43.072727272727,49.0636363636351" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-26.6550230823865,33.2818181818175,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output4]"
+          TopLeft="748.593510501615,293.426470397872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-392.12792287772,-35.7810181314189"
+              Start="0,0"
+              End="-392.12792287772,-28.2810181314189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-13.8905090657095" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-13.8905090657095"
+                    Point2="0,-17.8905090657095"
+                    Point3="-4,-17.8905090657095" />
+                  <mssgle:LineSegment
+                    End="-388.12792287772,-17.8905090657095" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-388.12792287772,-17.8905090657095"
+                    Point2="-392.12792287772,-17.8905090657095"
+                    Point3="-392.12792287772,-21.8905090657095" />
+                  <mssgle:LineSegment
+                    End="-392.12792287772,-28.2810181314189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-241.93034815761,-12.8905090657095,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output3]"
+          TopLeft="1028.63636363636,549.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="441.509090909086,-34"
+              Start="0,0"
+              End="441.509090909086,-26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-13"
+                    Point2="0,-17"
+                    Point3="4,-17" />
+                  <mssgle:LineSegment
+                    End="437.509090909086,-17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="437.509090909086,-17"
+                    Point2="441.509090909086,-17"
+                    Point3="441.509090909086,-21" />
+                  <mssgle:LineSegment
+                    End="441.509090909086,-26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="174.888158735793,-12,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output2]"
+          TopLeft="887.236363636365,652.872727272727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-126.654545454547,0"
+              Start="0,0"
+              End="-119.154545454547,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-119.154545454547,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-105.443659446023,5,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output1]"
+          TopLeft="886.236363636364,742.336363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-112.854545454546,0"
+              Start="0,0"
+              End="-105.354545454546,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-105.354545454546,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.543659446023,5,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output]"
+          TopLeft="1273.26494479631,334.470592407207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="242.163635171543,24.7786052178115"
+              Start="0,0"
+              End="234.663635171543,24.7786052178115">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="117.081817585771,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="117.081817585771,0"
+                    Point2="121.081817585771,0"
+                    Point3="121.081817585771,4" />
+                  <mssgle:LineSegment
+                    End="121.081817585771,20.7786052178115" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.081817585771,20.7786052178115"
+                    Point2="121.081817585771,24.7786052178115"
+                    Point3="125.081817585771,24.7786052178115" />
+                  <mssgle:LineSegment
+                    End="234.663635171543,24.7786052178115" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="75.2154308670214,-17.609375,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Output]"
+          TopLeft="1154.13636363636,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Error Output]"
+          TopLeft="1277.63636363636,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172,0"
+              Start="0,0"
+              End="164.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="164.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="18.62361328125,5,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Derived Column Output]"
+          TopLeft="811.181818181819,573.254545454545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.054545454545,0"
+              Start="0,0"
+              End="67.554545454545,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.554545454545,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Derived Column Error Output]"
+          TopLeft="583.181818181819,577.909090909091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-144.236363636364,0"
+              Start="0,0"
+              End="-136.736363636364,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-136.736363636364,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-133.329568536932,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Output]"
+          TopLeft="1145.05065421633,285.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.0705924072072"
+              Start="0,0"
+              End="0,20.5705924072072">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5705924072072" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Error Output]"
+          TopLeft="1284.63636363636,264.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="217,0"
+              Start="0,0"
+              End="209.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="209.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="38.66361328125,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Conditional Split Error Output]"
+          TopLeft="1278.63636363636,170.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191.5,0"
+              Start="0,0"
+              End="184,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="184,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="26.30609375,5,131.3878125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Conditional Split Default Output]"
+          TopLeft="1030.63636363636,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148,0"
+              Start="0,0"
+              End="-140.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-140.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-140.86390625,5,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[ValueIsNotNull]"
+          TopLeft="1150.88636363636,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.0803125,16.87548828125,66.160625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output]"
+          TopLeft="828.079221454335,443.578431703228">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.176191151304,36.8215682967722"
+              Start="0,0"
+              End="-104.176191151304,29.3215682967722">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8235148685748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8235148685748"
+                    Point2="0,21.8235148685748"
+                    Point3="-4,21.8235148685748" />
+                  <mssgle:LineSegment
+                    End="-100.176191151304,21.8235148685748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-100.176191151304,21.8235148685748"
+                    Point2="-104.176191151304,21.8235148685748"
+                    Point3="-104.176191151304,25.8235148685748" />
+                  <mssgle:LineSegment
+                    End="-104.176191151304,29.3215682967722" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[stage_dim_population]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[stage_dim_location]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[stage_dim_crop]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[stage_dim_climate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_crop]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="308.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Convert Element and Item Codes data type Error"
+          TopLeft="776.5,304.1" />
+        <NodeLayout
+          Size="238.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop Error"
+          TopLeft="839.78571427355,500.1" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop"
+          TopLeft="339.78571427355,499.335294106922" />
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Remove Duplicate records"
+          TopLeft="346.5,187.1" />
+        <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Convert Element and Item Codes data type"
+          TopLeft="305.5,297.1" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Crop Attributes Data source"
+          TopLeft="341.071429739193,79.9117646415341" />
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Sort Output]"
+          TopLeft="447,228.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.4"
+              Start="0,0"
+              End="0,60.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[OLE DB Destination Error Output]"
+          TopLeft="550.98571427355,520.517647053461">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="288.8,0"
+              Start="0,0"
+              End="281.3,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="281.3,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="67.44109375,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Flat File Source Output]"
+          TopLeft="446.385714869597,121.511764641534">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.5882353584659"
+              Start="0,0"
+              End="0,58.0882353584659">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.0882353584659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Data Conversion Error Output]"
+          TopLeft="587.9,321.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.6,0"
+              Start="0,0"
+              End="181.1,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="181.1,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="24.46361328125,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="236,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Crop Attributes Data source Error"
+          TopLeft="706.5,84.7" />
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Flat File Source Error Output]"
+          TopLeft="549.871429739193,103.105882320767">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.628570260807,0"
+              Start="0,0"
+              End="149.128570260807,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="149.128570260807,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="10.9378984116534,5,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates"
+          TopLeft="368,385" />
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Data Conversion Output]"
+          TopLeft="448.95,338.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.2999999999998"
+              Start="0,0"
+              End="0,38.7999999999998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.7999999999998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Lookup No Match Output]"
+          TopLeft="448.292857136775,426.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.735294106922"
+              Start="0,0"
+              End="0,65.235294106922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.235294106922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,26.812959553461,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates Match"
+          TopLeft="846,392" />
+        <EdgeLayout
+          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Lookup Match Output]"
+          TopLeft="534.4,409.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="311.6,0"
+              Start="0,0"
+              End="304.1,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="304.1,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="103.85861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_crop]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Dim_Climate Container\Extract&amp;Transform Data from sources for Stage_DIM_Climate">
     <LayoutInfo>
@@ -21614,899 +22896,18 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="273.6,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Destination for records when value is null"
-          TopLeft="608.636363636364,154" />
-        <NodeLayout
-          Size="288,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB"
-          TopLeft="887.236363636365,633.6" />
-        <NodeLayout
-          Size="300.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type Error"
-          TopLeft="1501.63636363636,243" />
-        <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null Error"
-          TopLeft="1470.13636363636,147.5" />
-        <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source Error"
-          TopLeft="1449.63636363636,62" />
-        <NodeLayout
-          Size="300.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB"
-          TopLeft="886.236363636364,723.800000000001" />
-        <NodeLayout
-          Size="280.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor Error"
-          TopLeft="1369.94545454546,816.6" />
-        <NodeLayout
-          Size="254.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor"
-          TopLeft="952.509090909091,821.963636363636" />
-        <NodeLayout
-          Size="260.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB"
-          TopLeft="656.750653024242,247.905885602529" />
-        <NodeLayout
-          Size="248,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Crop Monitor Attributes Data source"
-          TopLeft="1029.63636363636,60" />
-        <NodeLayout
-          Size="248,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Remove Records When Value is null"
-          TopLeft="1030.63636363636,151" />
-        <NodeLayout
-          Size="284.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB"
-          TopLeft="886.236363636364,549.6" />
-        <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Convert item and element code data type"
-          TopLeft="1009.63636363636,244" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[ValueIsNotNull]"
-          TopLeft="1150.88636363636,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-33.0803125,16.87548828125,66.160625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[OLE DB Destination Error Output]"
-          TopLeft="1206.90909090909,840.081818181818">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="163.036363636364,0"
-              Start="0,0"
-              End="155.536363636364,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="155.536363636364,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="4.55927556818214,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output]"
-          TopLeft="1033.93636363636,675.2">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.6000000000009"
-              Start="0,0"
-              End="0,41.1000000000009">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.1000000000009" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,14.7453125000005,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Output]"
-          TopLeft="1154.13636363636,102">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Flat File Source Error Output]"
-          TopLeft="1277.63636363636,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="172,0"
-              Start="0,0"
-              End="164.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="164.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="18.62361328125,5,127.2527734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Output]"
-          TopLeft="1009.63636363636,266.752942801265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-92.0857106121221,0"
-              Start="0,0"
-              End="-84.5857106121221,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-84.5857106121221,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Data Conversion Error Output]"
-          TopLeft="1284.63636363636,264.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="217,0"
-              Start="0,0"
-              End="209.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="209.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="38.66361328125,5,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Conditional Split Error Output]"
-          TopLeft="1278.63636363636,170.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="191.5,0"
-              Start="0,0"
-              End="184,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="184,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="26.30609375,5,131.3878125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Conditional Split Default Output]"
-          TopLeft="1030.63636363636,173.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-148,0"
-              Start="0,0"
-              End="-140.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-140.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-140.86390625,5,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="259.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db"
-          TopLeft="383.636363636364,307" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output]"
-          TopLeft="656.750653024242,268.705885602529">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.514289387878,38.2941143974711"
-              Start="0,0"
-              End="-143.514289387878,30.7941143974711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-139.514289387878,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-139.514289387878,0"
-                    Point2="-143.514289387878,0"
-                    Point3="-143.514289387878,4" />
-                  <mssgle:LineSegment
-                    End="-143.514289387878,30.7941143974711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-199.320676106628,-17.609375,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Merge Join"
-          TopLeft="638.836363636364,480.4" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort"
-          TopLeft="739.636363636364,378.4" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Sort 1"
-          TopLeft="513.636363636364,384.4" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output1]"
-          TopLeft="513.236363636364,348.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.6,35.7999999999998"
-              Start="0,0"
-              End="53.6,28.2999999999998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.8999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.8999999999999"
-                    Point2="0,17.8999999999999"
-                    Point3="4,17.8999999999999" />
-                  <mssgle:LineSegment
-                    End="49.6,17.8999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.6,17.8999999999999"
-                    Point2="53.6,17.8999999999999"
-                    Point3="53.6,21.8999999999999" />
-                  <mssgle:LineSegment
-                    End="53.6,28.2999999999998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-21.39138671875,22.8999999999999,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output2]"
-          TopLeft="787.793508330303,289.505885602529">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,88.8941143974709"
-              Start="0,0"
-              End="0,81.3941143974709">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,81.3941143974709" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,34.8923696987355,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output]"
-          TopLeft="566.836363636364,426">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="116.533333333333,54.4000000000002"
-              Start="0,0"
-              End="116.533333333333,46.9000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.2419512195123" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.2419512195123"
-                    Point2="0,32.2419512195123"
-                    Point3="4,32.2419512195123" />
-                  <mssgle:LineSegment
-                    End="112.533333333333,32.2419512195123" />
-                  <mssgle:CubicBezierSegment
-                    Point1="112.533333333333,32.2419512195123"
-                    Point2="116.533333333333,32.2419512195123"
-                    Point3="116.533333333333,36.2419512195123" />
-                  <mssgle:LineSegment
-                    End="116.533333333333,46.9000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Sort Output1]"
-          TopLeft="788.436363636364,420">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-64.5333333333334,60.4000000000002"
-              Start="0,0"
-              End="-64.5333333333334,52.9000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7980487804879" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7980487804879"
-                    Point2="0,35.7980487804879"
-                    Point3="-4,35.7980487804879" />
-                  <mssgle:LineSegment
-                    End="-60.5333333333334,35.7980487804879" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-60.5333333333334,35.7980487804879"
-                    Point2="-64.5333333333334,35.7980487804879"
-                    Point3="-64.5333333333334,39.7980487804879" />
-                  <mssgle:LineSegment
-                    End="-64.5333333333334,52.9000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="228,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Join Duplicate columns into one"
-          TopLeft="583.181818181819,555.309090909091" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Merge Join Output]"
-          TopLeft="700.409090909091,522">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.309090909091"
-              Start="0,0"
-              End="0,25.809090909091">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.809090909091" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Derived Column Output]"
-          TopLeft="811.181818181819,573.254545454546">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75.0545454545456,0"
-              Start="0,0"
-              End="67.5545454545456,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="67.5545454545456,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output3]"
-          TopLeft="1029.93636363636,591.2">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.4"
-              Start="0,0"
-              End="0,34.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,11.6453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="332.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB No Match"
-          TopLeft="1320.18181818182,556" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output1]"
-          TopLeft="1171.03636363636,573.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="149.145454545454,0"
-              Start="0,0"
-              End="141.645454545454,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="141.645454545454,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="15.0163405539771,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="335.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB No Match"
-          TopLeft="1326.54545454545,633.272727272727" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output2]"
-          TopLeft="1175.23636363636,654.236363636364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="151.30909090909,0"
-              Start="0,0"
-              End="143.80909090909,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="143.80909090909,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="16.0981587357952,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Match Output4]"
-          TopLeft="1037.63939393939,765.400000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.5636363636352"
-              Start="0,0"
-              End="0,49.0636363636352">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.0636363636352" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.7271306818176,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="311.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB Error"
-          TopLeft="1314.54545454545,474" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output]"
-          TopLeft="1028.63636363636,549.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="441.50909090909,-34.0000000000003"
-              Start="0,0"
-              End="441.50909090909,-26.5000000000003">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-13.0000000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-13.0000000000002"
-                    Point2="0,-17.0000000000002"
-                    Point3="4,-17.0000000000002" />
-                  <mssgle:LineSegment
-                    End="437.50909090909,-17.0000000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="437.50909090909,-17.0000000000002"
-                    Point2="441.50909090909,-17.0000000000002"
-                    Point3="441.50909090909,-21.0000000000002" />
-                  <mssgle:LineSegment
-                    End="441.50909090909,-26.5000000000003" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="174.888158735795,-12.0000000000002,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="314.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB Error"
-          TopLeft="446.181818181818,630.545454545455" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output1]"
-          TopLeft="887.236363636365,652.872727272727">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-126.654545454546,0"
-              Start="0,0"
-              End="-119.154545454546,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-119.154545454546,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-105.443659446023,5,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="348,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB No Match"
-          TopLeft="1334.36363636364,720.545454545455" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output3]"
-          TopLeft="1187.03636363636,742.972727272728">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.327272727273,0"
-              Start="0,0"
-              End="139.827272727273,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="139.827272727273,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.1072496448864,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="327.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB Error"
-          TopLeft="446.181818181818,719.272727272727" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output2]"
-          TopLeft="886.236363636364,742.336363636364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-112.854545454546,0"
-              Start="0,0"
-              End="-105.354545454546,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-105.354545454546,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-98.5436594460228,5,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="287.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB Error"
-          TopLeft="1014,355.272727272727" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output3]"
-          TopLeft="829.283986357575,289.505885602529">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="328.316013642425,65.7668416701982"
-              Start="0,0"
-              End="328.316013642425,58.2668416701982">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5473470644337" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.5473470644337"
-                    Point2="0,26.5473470644337"
-                    Point3="4,26.5473470644337" />
-                  <mssgle:LineSegment
-                    End="324.316013642425,26.5473470644337" />
-                  <mssgle:CubicBezierSegment
-                    Point1="324.316013642425,26.5473470644337"
-                    Point2="328.316013642425,26.5473470644337"
-                    Point3="328.316013642425,30.5473470644337" />
-                  <mssgle:LineSegment
-                    End="328.316013642425,58.2668416701982" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="118.291620102462,31.5473470644337,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="307.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db No Match"
-          TopLeft="16.3636363636365,308.545454545454" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup No Match Output4]"
-          TopLeft="383.636363636364,328.572727272727">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-60.0727272727274,0"
-              Start="0,0"
-              End="-52.5727272727274,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-52.5727272727274,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-82.0927503551137,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="285.6,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db Error"
-          TopLeft="25.2727272727273,378.545454545454" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Lookup Error Output4]"
-          TopLeft="471.369696969697,348.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-303.29696969697,29.9454545454542"
-              Start="0,0"
-              End="-303.29696969697,22.4454545454542">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.08841048522016" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.08841048522016"
-                    Point2="0,12.0884104852202"
-                    Point3="-4,12.0884104852202" />
-                  <mssgle:LineSegment
-                    End="-299.29696969697,12.0884104852202" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-299.29696969697,12.0884104852202"
-                    Point2="-303.29696969697,12.0884104852202"
-                    Point3="-303.29696969697,16.0884104852202" />
-                  <mssgle:LineSegment
-                    End="-303.29696969697,22.4454545454542" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-197.514871567235,17.0884104852202,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="254.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Join Duplicate columns into one Error"
-          TopLeft="184.545454545455,558.909090909091" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor.Paths[Derived Column Error Output]"
-          TopLeft="583.181818181819,577.909090909091">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-144.236363636364,0"
-              Start="0,0"
-              End="-136.736363636364,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-136.736363636364,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-133.329568536932,5,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_location from staging DB">
+    design-time-name="Package\Dim_Climate Container\Extract&amp;Transform Data from sources for Stage_DIM_Climate\Exisitng Duplicates">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[stage_dim_location]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_population from staging DB">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[stage_dim_population]</Value>
+          type="q3:string">[dbo].[dim_climate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -22515,308 +22916,6 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Insert Into Stage_Fact_Crop_Monitor">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Loolup for id_dim_crop from actual DB">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_crop]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup For id_dim_climate from staging DB">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[stage_dim_climate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="308.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Convert Element and Item Codes data type Error"
-          TopLeft="776.5,304.1" />
-        <NodeLayout
-          Size="238.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop Error"
-          TopLeft="839.78571427355,500.1" />
-        <NodeLayout
-          Size="211.2,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop"
-          TopLeft="339.78571427355,499.335294106922" />
-        <NodeLayout
-          Size="201.6,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Remove Duplicate records"
-          TopLeft="346.5,187.1" />
-        <NodeLayout
-          Size="282.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Convert Element and Item Codes data type"
-          TopLeft="305.5,297.1" />
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Crop Attributes Data source"
-          TopLeft="341.071429739193,79.9117646415341" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Sort Output]"
-          TopLeft="447,228.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.4"
-              Start="0,0"
-              End="0,60.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[OLE DB Destination Error Output]"
-          TopLeft="550.98571427355,520.517647053461">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="288.8,0"
-              Start="0,0"
-              End="281.3,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="281.3,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="67.44109375,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Flat File Source Output]"
-          TopLeft="446.385714869597,121.511764641534">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,65.5882353584659"
-              Start="0,0"
-              End="0,58.0882353584659">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.0882353584659" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Data Conversion Error Output]"
-          TopLeft="587.9,321.4">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="188.6,0"
-              Start="0,0"
-              End="181.1,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="181.1,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="24.46361328125,5,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="236,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Crop Attributes Data source Error"
-          TopLeft="706.5,84.7" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Flat File Source Error Output]"
-          TopLeft="549.871429739193,103.105882320767">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="156.628570260807,0"
-              Start="0,0"
-              End="149.128570260807,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="149.128570260807,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="10.9378984116534,5,127.2527734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates"
-          TopLeft="368,385" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Data Conversion Output]"
-          TopLeft="448.95,338.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.2999999999998"
-              Start="0,0"
-              End="0,38.7999999999998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.7999999999998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Lookup No Match Output]"
-          TopLeft="448.292857136775,426.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.735294106922"
-              Start="0,0"
-              End="0,65.235294106922">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.235294106922" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,26.812959553461,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates Match"
-          TopLeft="846,392" />
-        <EdgeLayout
-          Id="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop.Paths[Lookup Match Output]"
-          TopLeft="534.4,409.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="311.6,0"
-              Start="0,0"
-              End="304.1,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="304.1,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="103.85861328125,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Insert Into Stage_Dim_Crop">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -23215,6 +23314,29 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dim_Location Container\Extract&amp;Transform Data from sources for Stage_DIM_Location\Exisitng Duplicates">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_location]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population">
     <LayoutInfo>
@@ -23401,7 +23523,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
           TopLeft="727.527272727272,654.645454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23423,7 +23545,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output1]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
           TopLeft="731.3,497.190909090909">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23445,7 +23567,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Derived Column Output2]"
           TopLeft="728.045454545455,428.227272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23681,7 +23803,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output1]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output2]"
           TopLeft="943.5,190.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23715,7 +23837,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output1]"
           TopLeft="472,191.409090909091">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23873,7 +23995,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
           Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Exisitng Duplicate"
           TopLeft="650,856.4" />
         <EdgeLayout
-          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output2]"
+          Id="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population.Paths[Sort Output]"
           TopLeft="728.9,820.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23950,71 +24072,12 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Insert into Stage_Dim_Population">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform  Data from sources for Stage_Fact_crop_Monitor\Lookup for id_dim_crop from stage db">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[stage_dim_crop]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim_Location Container\Extract&amp;Transform Data from sources for Stage_DIM_Location\Exisitng Duplicates">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_location]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Exisitng Duplicate">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -24024,7 +24087,7 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24032,48 +24095,15 @@ where [refTable].[country] = ? and [refTable].[year] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Crop Container\Extract&amp;Transform Data from sources for Stage_dim_Crop\Exisitng Duplicates">
+    design-time-name="Package\Dim_Population Container\Extract&amp;Transform Data from sources for Stage_DIM_Population\Insert into Stage_Dim_Population">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_crop]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim_Climate Container\Extract&amp;Transform Data from sources for Stage_DIM_Climate\Exisitng Duplicates">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_climate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

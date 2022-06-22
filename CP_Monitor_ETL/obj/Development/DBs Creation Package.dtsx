@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
   DTS:DTSID="{C8BEAD4C-0015-4BCA-B7E3-DAD668556C17}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
   DTS:VersionBuild="4"
-  DTS:VersionGUID="{E7C14C1E-893F-41EE-A2CA-C04C7B73E511}">
+  DTS:VersionGUID="{006E4304-290A-499C-BE18-729E2A0CBE36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

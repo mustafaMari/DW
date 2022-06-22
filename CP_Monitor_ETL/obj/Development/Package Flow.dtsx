@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-222AJPA\Mustafa"
   DTS:DTSID="{A411B07D-FE89-4D88-8B27-BA2DB6CA6CB5}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package3"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{07F20DF1-F5B7-495F-93FA-729C3ECA1719}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{78DC3CB6-47A6-4417-BF3F-D6FA7ACFC2F0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -114,7 +114,7 @@
         <NodeLayout
           Size="196,41.6"
           Id="Package\Sequence Container\Execute DBc Creation Package"
-          TopLeft="30.4000047683716,19.8705909486461" />
+          TopLeft="29.6857190419219,19.8705909486461" />
         <NodeLayout
           Size="192,41.6"
           Id="Package\Sequence Container\Execute Extract and Transformation Package"
@@ -125,18 +125,18 @@
           TopLeft="26.1142904096721,193.458828677273" />
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
-          TopLeft="125.614290452247,61.4705909486461">
+          TopLeft="125.257147589022,61.4705909486461">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246973"
+              EndConnector="0,44.0470600246969"
               Start="0,0"
-              End="0,36.5470600246973">
+              End="0,36.5470600246969">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5470600246973" />
+                    End="0,36.5470600246969" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -173,7 +173,7 @@
           PanelSize="230.4,290.4"
           Size="230.4,333.6"
           Id="Package\Sequence Container"
-          TopLeft="412.90000170299,90.68235431394" />
+          TopLeft="413.61428742944,90.68235431394" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
